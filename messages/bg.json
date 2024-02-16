@@ -1,0 +1,14 @@
+
+{
+  "Nav": {
+    "aboutMe": "За нас",
+    "blog": "Блог",
+    "contacts": "Контакти",
+    "enquiry": "Запитване"
+  },
+  "Home": {
+    "counselling": "Консултации",
+    "business": "Бизнес",
+    "training": "Обучение"
+  }
+}

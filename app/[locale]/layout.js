@@ -1,0 +1,53 @@
+import NavBar from "../../components/NavBar";
+import { useTranslations } from "next-intl";
+import localFont from "next/font/local";
+
+const mont = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Mont.otf",
+      weight: "400",
+    },
+    {
+      path: "../../public/fonts/Mont-Heavy.otf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-mont",
+});
+
+const typo = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Typo-Thin.otf",
+      weight: "400",
+    },
+    {
+      path: "../../public/fonts/Typo-Regular.otf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-typo",
+});
+
+export default function LocaleLayout({ children, params: { locale } }) {
+  const t = useTranslations("Nav");
+  const navigation = [
+    { name: t("aboutMe"), href: "#", current: false },
+    { name: t("blog"), href: "#", current: false },
+    { name: t("contacts"), href: "#", current: false },
+  ];
+  const enquiry = t("enquiry");
+  return (
+    <html
+      lang={locale}
+      className={`${mont.variable} font-sans, ${typo.variable} font-sans`}
+    >
+      <body>
+        <NavBar locale={locale} navigation={navigation} enquiry={enquiry} />
+
+        {children}
+      </body>
+    </html>
+  );
+}

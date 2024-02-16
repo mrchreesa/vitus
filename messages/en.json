@@ -1,0 +1,13 @@
+{
+  "Nav": {
+    "aboutMe": "About",
+    "blog": "Blog",
+    "contacts": "Contacts",
+    "enquiry": "Contact us"
+  },
+  "Home": {
+    "counselling": "Counselling",
+    "business": "Business",
+    "training": "Training"
+  }
+}
