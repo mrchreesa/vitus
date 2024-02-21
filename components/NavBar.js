@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logoEn from "../public/vitus-en.png";
 import logoBg from "../public/vitus-bg.png";
 import Image from "next/image";
+import Link from "next/link";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -11,11 +12,14 @@ function classNames(...classes) {
 
 export default function NavBar({ locale, navigation, enquiry }) {
   return (
-    <Disclosure as="nav" className="bg-greenDark ">
+    <Disclosure
+      as="nav"
+      className="bg-greenDark fixed top-0 left-0 right-0 z-50"
+    >
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 font-mont">
-            <div className="relative flex h-16 items-center justify-between">
+          <div className="mx-auto   max-w-7xl px-2 sm:px-6 lg:px-8 font-mont z-100">
+            <div className="relative  flex h-16 items-center justify-between z-10">
               {/* Mobile menu button*/}
               <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-greenDark hover:text-white focus:outline-none ">
@@ -36,12 +40,14 @@ export default function NavBar({ locale, navigation, enquiry }) {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Image
-                    priority
-                    className="h-16 w-auto"
-                    src={locale == "bg" ? logoBg : logoEn}
-                    alt="Logo of VITUS"
-                  />
+                  <Link href="/">
+                    <Image
+                      priority
+                      className="h-16 w-auto"
+                      src={locale == "bg" ? logoBg : logoEn}
+                      alt="Logo of VITUS"
+                    />
+                  </Link>
                 </div>
                 <div className="flex flex-grow"></div>
                 <div className="hidden sm:ml-6 sm:flex font-mont sm:items-center sm:justify-center ">

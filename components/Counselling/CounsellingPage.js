@@ -9,7 +9,7 @@ import ContactUs from "./ContactUs";
 const CounsellingPage = ({ home }) => {
   return (
     <>
-      <div className="h-screen-64 bg-bg bg-center bg-no-repeat bg-cover flex font-mont">
+      <div className="h-screen bg-bg bg-center bg-no-repeat bg-cover bg-fixed flex font-mont">
         <div className="w-full flex flex-col justify-center items-center">
           <div className="flex justify-around w-full  mb-24 text-4xl bg-white px-10 py-8 bg-opacity-60 ">
             <Link href="#">

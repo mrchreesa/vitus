@@ -7,3 +7,14 @@
     text-wrap: balance;
   }
 }
+
+.fp-table {
+  justify-content: flex-start !important;
+}
+
+body {
+  background-color: rgb(182, 222, 188, 0.5) !important;
+}
+.fp-watermark {
+  display: none !important;
+}

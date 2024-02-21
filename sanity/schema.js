@@ -10,9 +10,16 @@ const event = {
     },
     {
       name: "date",
-      title: "Date",
-      type: "date",
+      title: "Date and Time",
+      type: "datetime",
+      options: {
+        dateFormat: "YYYY-MM-DD",
+        timeFormat: "HH:mm",
+        timeStep: 15,
+        calendarTodayLabel: "Today",
+      },
     },
+
     {
       name: "location",
       title: "Location",
