@@ -6,21 +6,20 @@ export async function getEvents() {
     projectId,
     dataset,
     apiVersion,
-    useCdn: true,
+    useCdn: false, // Set to false to avoid using the CDN and its caching
   });
 
   return client.fetch(
     groq`*[_type == "event"] | order(date asc) {
-        _id,
-        _createdAt,
-        name,
-        date,
-  
-        location,
-        description,
-        "image": image.asset->url,
-        "slug": slug.current,
-        url
+      _id,
+      _createdAt,
+      name,
+      date,
+      location,
+      description,
+      "image": image.asset->url,
+      "slug": slug.current,
     }`
   );
 }
+export const dynamic = "force-dynamic";

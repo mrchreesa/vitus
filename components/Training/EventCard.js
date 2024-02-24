@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import moment from "moment";
+import placeholder from "@/public/collection1.png";
 
 const EventCard = ({
   name,
@@ -33,16 +34,15 @@ const EventCard = ({
   };
   return (
     <div
-      className={` mx-auto  h-screen   flex items-center justify-center px-8 pt-10 font-mont text-lg 
-            `}
+      className={`h-screen w-screen flex  items-center justify-center  font-mont text-lg  `}
     >
-      <div className=" flex flex-col w-full rounded shadow-lg   sm:w-[70%] lg:w-1/2 max-w-[1200px]">
+      <div className=" flex flex-col w-full h-[80%] mt-12 justify-center items-center rounded shadow-lg overflow-hidden sm:w-[70%] lg:w-1/2 max-w-[1200px]">
         <Image
-          src={image}
+          src={image || placeholder}
           alt=" image "
           width={400}
           height={400}
-          className={` w-full h-[30vh] max-h-64 bg-center bg-no-repeat bg-cover rounded-t  `}
+          className={`h-full w-full object-center  object-no-repeat object-cover rounded-t  overflow-hidden`}
         ></Image>
         <div className=" flex flex-col w-full md:flex-row">
           <div className="flex z-0 flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-green bg-opacity-50 rounded md:flex-col md:items-center md:justify-center md:w-1/">
@@ -53,11 +53,11 @@ const EventCard = ({
             <div className="md:text-3xl">{year}</div>
             <div className="md:text-xl">{time}</div>
           </div>
-          <div className="p-4 flex bg-white flex-col font-normal h-[50vh] xl:h-[45vh] max-h-[350px] overflow-hide text-gray-800 md:w-3/4">
+          <div className="p-4 flex bg-white flex-col font-normal h-[50vh] xl:h-[45vh] max-h-[350px] overflow-hide text-gray-800 min-w-full md:w-3/4">
             <h1 className="mb-2 text-3xl font-bold leading-none mt-1 tracking-tight text-gray-800">
               {name}
             </h1>
-            <p className="leading-normal opacity-50 line-clamp-[5] font-medium	text-md">
+            <p className="leading-normal opacity-50 line-clamp-[5] w-3/4 font-medium	text-md">
               {truncateText(description, 120)}
             </p>
             <div className="flex flex-grow"></div>

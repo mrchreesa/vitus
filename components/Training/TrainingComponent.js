@@ -3,13 +3,8 @@ import React from "react";
 import EventCard from "./EventCard";
 import ReactFullpage from "@fullpage/react-fullpage";
 
-const pluginWrapper = () => {
-  /*
-   * require('../static/fullpage.scrollHorizontally.min.js'); // Optional. Required when using the "scrollHorizontally" extension.
-   */
-};
-
 const TrainingComponent = ({ events }) => {
+  console.log("events", events);
   const onLeave = (origin, destination, direction) => {
     console.log("onLeave", { origin, destination, direction });
     // arguments are mapped in order of fullpage.js callback arguments do something
@@ -31,7 +26,7 @@ const TrainingComponent = ({ events }) => {
             {events.map((event, i) => (
               <div
                 key={event._id}
-                className={"section  fp-auto-height-responsive items-center  "}
+                className={"section fp-auto-height-responsive items-center "}
               >
                 <EventCard
                   index={i}

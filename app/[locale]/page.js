@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import NavBar from "../../components/NavBar";
-import CounsellingPage from "@/components/Counselling/CounsellingPage";
+import CounsellingPage from "../../components/Counselling/CounsellingPage";
 
 export default function Index() {
   const t = useTranslations("Home");
