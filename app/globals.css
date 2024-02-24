@@ -14,7 +14,11 @@
 
 body {
   background-color: rgb(182, 222, 188, 0.5) !important;
+  overflow-x: hidden !important;
 }
 .fp-watermark {
   display: none !important;
+}
+body {
+  color: #ecf5f8 !important;
 }
