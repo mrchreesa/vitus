@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div>
+    <div id="enquiry">
       <section className="text-gray-700 font-mont body-font relative bg-greenLight bg-opacity-75">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">

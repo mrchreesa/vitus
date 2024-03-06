@@ -98,7 +98,7 @@ export default function NavBar({ locale, navigation, enquiry }) {
                 <div className="flex flex-grow"></div>
                 <div className="hidden sm:flex items-center justify-center">
                   <a
-                    href="#"
+                    href="#enquiry"
                     className={classNames(
                       "text-gray-300 hover:bg-green hover:text-white transition-all duration-200",
                       "rounded-full border px-3 py-2 text-sm font-medium"

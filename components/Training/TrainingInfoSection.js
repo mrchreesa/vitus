@@ -21,11 +21,11 @@ const TrainingInfoSeciton = ({ training }) => {
     description: training.couples.description,
   };
   return (
-    <div className="flex flex-col md:flex-row flex-wrap justify-center ml-10 w-[90%] mt-8 md:mt-20">
+    <div className="flex flex-col md:flex-row flex-wrap justify-center ml-10 w-[95%] mt-8 md:mt-20">
       {sections.map((section, index) => (
         <div
           key={index}
-          className="w-full md:w-1/3 flex items-center font-mont text-green"
+          className="w-full md:w-1/3 flex items-start font-mont text-green"
         >
           <div className="p-8 ">
             <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
