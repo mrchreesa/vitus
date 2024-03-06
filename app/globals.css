@@ -12,6 +12,10 @@
   justify-content: flex-start !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(182, 222, 188, 0.5) !important;
   overflow-x: hidden !important;

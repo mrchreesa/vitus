@@ -34,6 +34,7 @@ const InfoSection = ({ counselling }) => {
   return (
     <>
       <InfoItem {...section1} />
+
       <InfoItem {...section2} />
       <InfoItem {...section3} />
     </>

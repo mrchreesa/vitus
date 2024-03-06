@@ -9,7 +9,9 @@ const CounsellingContainer = ({ home, counselling }) => {
   return (
     <>
       <LandingPage home={home} />
-      <InfoSection counselling={counselling} />
+      <div id="counselling">
+        <InfoSection counselling={counselling} />
+      </div>
       <ContactUs />
     </>
   );
