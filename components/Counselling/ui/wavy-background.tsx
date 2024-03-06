@@ -68,7 +68,7 @@ export const WavyBackground = ({
     render();
   };
 
-  const waveColors = ["#cafaf0 ", "#ade7f5", "#adf5e6", "#cfeef6", "#ecf5f8"];
+  const waveColors = ["#cafaf0 ", "#ade7f5", "#adf5e6"];
   const drawWave = (n: number) => {
     nt += getSpeed();
     for (i = 0; i < n; i++) {
@@ -89,7 +89,7 @@ export const WavyBackground = ({
     ctx.fillStyle = "transparent";
     ctx.globalAlpha = 0.5;
     ctx.fillRect(0, 0, w, h);
-    drawWave(5);
+    drawWave(3);
     animationId = requestAnimationFrame(render);
   };
 
@@ -103,7 +103,7 @@ export const WavyBackground = ({
   return (
     <div
       className={cn(
-        "h-screen flex flex-col items-center justify-center opacity-70 overflow-hidden",
+        "h-screen flex flex-col items-center justify-center opacity-70 overflow-hidden animate-fadeSlow",
         containerClassName
       )}
     >

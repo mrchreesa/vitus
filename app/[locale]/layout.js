@@ -31,6 +31,7 @@ const typo = localFont({
 });
 
 export default function LocaleLayout({ children, params: { locale } }) {
+  // console.log(locale);
   const t = useTranslations("Nav");
   const navigation = [
     { name: t("aboutMe"), href: "#", current: false },

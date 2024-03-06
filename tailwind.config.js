@@ -25,6 +25,8 @@ module.exports = {
       // that is animation class
       animation: {
         fade: "fadeOut 0.4s ease-in-out",
+        fadeSlow: "fadeOut 1s ease-in-out",
+        fadeInfinate: "fadeOut3 3s ease-in-out infinite",
       },
 
       // that is actual animation
@@ -32,6 +34,14 @@ module.exports = {
         fadeOut: {
           "0%": { opacity: 0 },
           "100%": { opacity: 100 },
+        },
+        fadeOut2: {
+          "0%": { opacity: 0 },
+          "70%": { opacity: 70 },
+        },
+        fadeOut3: {
+          "0%, 100%": { opacity: 0 },
+          "50%": { opacity: 1 },
         },
       }),
       height: {
