@@ -44,6 +44,9 @@ export default function LocaleLayout({ children, params: { locale } }) {
       lang={locale}
       className={`${mont.variable} font-sans, ${typo.variable} font-sans`}
     >
+      <head>
+        <link rel="preload" href="/maze.jpeg" as="image" />
+      </head>
       <body>
         <NavBar locale={locale} navigation={navigation} enquiry={enquiry} />
 
