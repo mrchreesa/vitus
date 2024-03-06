@@ -1,7 +1,6 @@
 import React from "react";
-import TrainingComponent from "../../../components/Training/TrainingComponent";
 import { useTranslations } from "next-intl";
-import TrainingContainer from "@/components/Training/TrainingContainer";
+import TrainingContainer from "../../../components/Training/TrainingContainer";
 
 const Training = () => {
   const j = useTranslations("Training");
