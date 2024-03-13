@@ -1,4 +1,4 @@
-import NavBar from "../../components/NavBar";
+import NavBar from "../../components/Navigation/NavBar";
 import { useTranslations } from "next-intl";
 import localFont from "next/font/local";
 
@@ -34,7 +34,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
   // console.log(locale);
   const t = useTranslations("Nav");
   const navigation = [
-    { name: t("aboutMe"), href: "#", current: false },
+    { name: t("aboutMe"), href: "/about", current: false },
     { name: t("blog"), href: "#", current: false },
     { name: t("contacts"), href: "#", current: false },
   ];

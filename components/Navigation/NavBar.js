@@ -1,10 +1,11 @@
 "use client";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import logoEn from "../public/vitus-en.png";
-import logoBg from "../public/vitus-bg.png";
+import logoEn from "../../public/vitus-en.png";
+import logoBg from "../../public/vitus-bg.png";
 import Image from "next/image";
 import Link from "next/link";
+import ToggleButton from "./ToggleLang";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -93,6 +94,7 @@ export default function NavBar({ locale, navigation, enquiry }) {
                         </svg>
                       </a>
                     </div>
+                    <ToggleButton locale={locale} />
                   </div>
                 </div>
                 <div className="flex flex-grow"></div>
