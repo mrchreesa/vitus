@@ -3,9 +3,9 @@ import React from "react";
 const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
   return (
     <div
-      className={`flex flex-col
-    "md:flex-row md:ml-10"
-      } w-full mt-8 md:mt-16`}
+      className={`flex flex-col h-screen ${
+        reverse ? "md:flex-row-reverse md:mr-10" : "md:flex-row md:ml-10"
+      } w-full mt-8 `}
     >
       <div className="w-full md:flex-1 flex items-center font-mont text-green">
         <div className="p-8 md:p-12 lg:p-16">

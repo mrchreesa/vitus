@@ -1,6 +1,6 @@
+import TrainingComponent from "../../../components/Training/TrainingComponent";
 import React from "react";
 import { useTranslations } from "next-intl";
-import TrainingContainer from "../../../components/Training/TrainingContainer";
 
 const Training = () => {
   const j = useTranslations("Training");
@@ -24,8 +24,7 @@ const Training = () => {
       description: j("SeminarForCouples.couplesSeminar.description"),
     },
   };
-
-  return <TrainingContainer training={training} />;
+  return <TrainingComponent training={training} />;
 };
-export const dynamic = "force-dynamic";
+
 export default Training;

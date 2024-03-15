@@ -1,43 +1,45 @@
 import React from "react";
+import TrainingInfoItem from "./TrainingInfoItem";
 
-const TrainingInfoSeciton = ({ training }) => {
-  // Create an array of sections for dynamic rendering
-  const sections = [
-    {
-      title: training.trainingForCPD.russianDolls.title,
-      description: training.trainingForCPD.russianDolls.description,
-    },
-    {
-      title: training.trainingForCPD.sandTrays.title,
-      description: training.trainingForCPD.sandTrays.description,
-    },
-    {
-      title: training.trainingForCPD.clientsCreativity.title,
-      description: training.trainingForCPD.clientsCreativity.description,
-    },
-  ];
-  const seminarForCouples = {
-    title: training.couples.title,
-    description: training.couples.description,
+const TrainingInfoSection = ({ training }) => {
+  // Images
+  const russianDollsImage = "../path-to-your-image/russian-dolls-image.jpeg"; // Update with the correct path
+  const sandTraysImage = "../path-to-your-image/sand-trays-image.jpeg"; // Update with the correct path
+  const clientsCreativityImage =
+    "../path-to-your-image/clients-creativity-image.jpeg"; // Update with the correct path
+
+  // Content for sections
+  const section1 = {
+    title: training.trainingForCPD.russianDolls.title,
+    text: training.trainingForCPD.russianDolls.description,
+    image: russianDollsImage,
+    imageAlt: "Russian dolls used in training",
+    reverse: false,
   };
+
+  const section2 = {
+    title: training.trainingForCPD.sandTrays.title,
+    text: training.trainingForCPD.sandTrays.description,
+    image: sandTraysImage,
+    imageAlt: "Sand trays used in training",
+    reverse: true, // Image on the right
+  };
+
+  const section3 = {
+    title: training.trainingForCPD.clientsCreativity.title,
+    text: training.trainingForCPD.clientsCreativity.description,
+    image: clientsCreativityImage,
+    imageAlt: "Client's creativity in training",
+    reverse: false,
+  };
+
   return (
-    <div className="flex flex-col md:flex-row flex-wrap justify-center ml-10 w-[95%] mt-8 md:mt-20">
-      {sections.map((section, index) => (
-        <div
-          key={index}
-          className="w-full md:w-1/3 flex items-start font-mont text-green"
-        >
-          <div className="p-8 ">
-            <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
-            <p className="text-base md:text-lg mb-2">{section.description}</p>
-          </div>
-        </div>
-      ))}
-      <div className="flex justify-center items-center text-green animate-fadeInfinate">
-        <p>Scroll Down for Events</p>
-      </div>
-    </div>
+    <>
+      <TrainingInfoItem {...section1} />
+      <TrainingInfoItem {...section2} />
+      <TrainingInfoItem {...section3} />
+    </>
   );
 };
 
-export default TrainingInfoSeciton;
+export default TrainingInfoSection;

@@ -26,3 +26,7 @@ body {
 body {
   color: #ecf5f8 !important;
 }
+
+.opac {
+  opacity: 1 !important;
+}

@@ -22,27 +22,43 @@ const LandingPage = ({ home }) => {
   };
   return (
     <div className="h-screen bg-bg bg-center bg-no-repeat bg-cover bg-fixed flex font-mont">
-      {" "}
       <WavyBackground className="w-screen ">
         <div className="flex flex-col items-center justify-center w-full ">
-          <div className="flex justify-around w-full  mb-24 text-4xl bg-white px-10 py-8 bg-opacity-60 ">
+          <div
+            className="flex justify-around w-full mb-24 text-4xl px-10 py-8 font-typo font-bold"
+            style={{ background: "rgba(255, 255, 255, 0.4)" }}
+          >
+            {" "}
+            {/* Use inline style for semi-transparent background */}
             <a href="#counselling" onClick={handleScrollToSection}>
-              <h1 className=" underline underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200">
+              <h1
+                className="underline underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200"
+                style={{ opacity: 1 }}
+              >
                 {home.counselling}
               </h1>
             </a>
             <Link href="/business">
-              <h1 className=" underline underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200">
+              <h1
+                className="underline underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200"
+                style={{ opacity: 1 }}
+              >
                 {home.business}
               </h1>
             </Link>
             <Link href="/training">
-              <h1 className=" underline underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200">
+              <h1
+                className="underline underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200"
+                style={{ opacity: 1 }}
+              >
                 {home.training}
               </h1>
             </Link>
           </div>
-          <div className="flex bg-white bg-opacity-100 text-green px-4">
+          <div
+            className="flex bg-white text-green px-4"
+            style={{ background: "rgba(255, 255, 255, 0.7)" }}
+          >
             <h3>1234 Some Street, Some City, Some Country</h3>
           </div>
         </div>

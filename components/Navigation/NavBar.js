@@ -94,16 +94,18 @@ export default function NavBar({ locale, navigation, enquiry }) {
                         </svg>
                       </a>
                     </div>
-                    <ToggleButton locale={locale} />
                   </div>
                 </div>
                 <div className="flex flex-grow"></div>
+
                 <div className="hidden sm:flex items-center justify-center">
+                  <ToggleButton locale={locale} />
+
                   <a
                     href="#enquiry"
                     className={classNames(
                       "text-gray-300 hover:bg-green hover:text-white transition-all duration-200",
-                      "rounded-full border px-3 py-2 text-sm font-medium"
+                      "rounded-full border px-3 py-2 text-sm font-medium ml-5"
                     )}
                   >
                     {enquiry}

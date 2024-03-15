@@ -28,7 +28,7 @@ const ToggleButton = ({ locale }) => {
           onChange={handleCheckboxChange}
           className="sr-only"
         />
-        <div className="block h-8 w-14 rounded-full bg-[#E5E7EB]"></div>
+        <div className="block h-8 w-14 rounded-full bg-green bg-opacity-80"></div>
         <div
           className={`dot absolute left-1 top-1 h-6 w-6 rounded-full bg-cover bg-center transition ${
             !isChecked ? "translate-x-6 bg-gbFlag " : "bg-bgFlag"

@@ -4,7 +4,7 @@ const AboutComponent = ({ about }) => {
   const paragraphs = about.split("\n\n");
   return (
     <div id="about" className="relative overflow-hidden ">
-      <div className="max-w-7xl mx-auto flex  items-center text-green">
+      <div className="max-w-7xl mx-auto flex  items-center text-green font-mont">
         <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
           <svg
             className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"

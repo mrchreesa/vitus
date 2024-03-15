@@ -76,7 +76,7 @@ export const WavyBackground = ({
       ctx.lineWidth = 30;
       ctx.strokeStyle = waveColors[i % waveColors.length];
       for (x = 0; x < w; x += 5) {
-        var y = noise(x / 800, 0.3 * i, nt) * 50;
+        var y = noise(x / 800, 0.3 * i, nt) * 35;
         ctx.lineTo(x, y + h * 0.4); // adjust for height, currently at 50% of the container
       }
       ctx.stroke();
@@ -87,7 +87,7 @@ export const WavyBackground = ({
   let animationId: number;
   const render = () => {
     ctx.fillStyle = "transparent";
-    ctx.globalAlpha = 0.5;
+    ctx.globalAlpha = 0.1;
     ctx.fillRect(0, 0, w, h);
     drawWave(3);
     animationId = requestAnimationFrame(render);
@@ -103,7 +103,7 @@ export const WavyBackground = ({
   return (
     <div
       className={cn(
-        "h-screen flex flex-col items-center justify-center opacity-70 overflow-hidden ",
+        "h-screen flex flex-col items-center justify-center  overflow-hidden ",
         containerClassName
       )}
     >
