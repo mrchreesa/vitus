@@ -3,9 +3,9 @@ import React from "react";
 const AboutComponent = ({ about }) => {
   const paragraphs = about.split("\n\n");
   return (
-    <div id="about" className="relative overflow-hidden ">
-      <div className="max-w-7xl mx-auto flex  items-center text-green font-mont">
-        <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+    <div id="about" className="relative overflow-hidden">
+      <div className=" mx-auto flex items-center text-green font-mont 2xl:ml-[10%] 2xl:h-screen">
+        <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 2xl:pb-10">
           <svg
             className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
             fill="currentColor"
@@ -18,7 +18,7 @@ const AboutComponent = ({ about }) => {
 
           <div className="pt-1"></div>
 
-          <main className="mt-10 mx-auto  max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-28 lg:px-8 ">
+          <main className="mt-10 mx-auto  max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-28 2xl:mt-10 lg:px-8 ">
             <div className="sm:text-center lg:text-left">
               <h2 className="my-6 text-2xl tracking-tight font-extrabold text-gray-900 sm:text-3xl md:text-3xl">
                 About me
@@ -46,7 +46,7 @@ const AboutComponent = ({ about }) => {
           </main>
         </div>
       </div>
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 flex items-center">
+      <div className="lg:absolute 2xl:mr-[15%] lg:inset-y-0 lg:right-0 lg:w-1/2 flex items-center">
         <img
           className="h-56 w-full object-cover object-top sm:h-72 md:h-96 lg:w-full "
           src="https://cdn.pixabay.com/photo/2016/03/23/04/01/woman-1274056_960_720.jpg"
