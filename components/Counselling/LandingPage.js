@@ -25,7 +25,7 @@ const LandingPage = ({ home }) => {
       <WavyBackground className="w-screen ">
         <div className="flex flex-col items-center justify-center w-full ">
           <div
-            className="flex justify-around w-full mb-24 text-4xl px-10 py-8 font-typo font-bold"
+            className="flex justify-around w-full mb-24 text-4xl px-10 py-8 font-bold"
             style={{ background: "rgba(255, 255, 255, 0.4)" }}
           >
             {" "}
