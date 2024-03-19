@@ -51,6 +51,7 @@ module.exports = {
         bg: "url('/maze.jpeg')",
         bgFlag: "url('/bg-flag.svg')",
         gbFlag: "url('/brit-flag.svg')",
+        waves: "url('/stacked-waves.svg')",
       },
     },
   },

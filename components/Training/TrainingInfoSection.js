@@ -33,11 +33,20 @@ const TrainingInfoSection = ({ training }) => {
     reverse: false,
   };
 
+  const section4 = {
+    title: training.couples.title,
+    text: training.couples.description,
+    image: null,
+    imageAlt: "Seminar for couples",
+    reverse: true,
+  };
+
   return (
     <>
       <TrainingInfoItem {...section1} />
       <TrainingInfoItem {...section2} />
       <TrainingInfoItem {...section3} />
+      <TrainingInfoItem {...section4} />
     </>
   );
 };

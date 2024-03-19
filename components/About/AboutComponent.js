@@ -1,7 +1,8 @@
 import React from "react";
 
-const AboutComponent = ({ about }) => {
+const AboutComponent = ({ about, title }) => {
   const paragraphs = about.split("\n\n");
+
   return (
     <div id="about" className="relative overflow-hidden">
       <div className=" mx-auto flex items-center text-green font-mont 2xl:ml-[10%] 2xl:h-screen">
@@ -20,8 +21,8 @@ const AboutComponent = ({ about }) => {
 
           <main className="mt-10 mx-auto  max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-28 2xl:mt-10 lg:px-8 ">
             <div className="sm:text-center lg:text-left">
-              <h2 className="my-6 text-2xl tracking-tight font-extrabold text-gray-900 sm:text-3xl md:text-3xl">
-                About me
+              <h2 className="my-6 text-2xl tracking-tight font-extrabold text-green sm:text-3xl md:text-3xl">
+                {title}
               </h2>
 
               <div>

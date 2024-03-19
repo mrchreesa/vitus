@@ -47,6 +47,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
     >
       <head>
         <link rel="preload" href="/maze.jpeg" as="image" />
+        <meta charset="UTF-8" />
       </head>
       <body>
         <NavBar locale={locale} navigation={navigation} enquiry={enquiry} />

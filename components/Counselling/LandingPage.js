@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { WavyBackground } from "./ui/wavy-background";
+import CustomHeading from "./CustomHeading";
 
 const LandingPage = ({ home }) => {
   const handleScrollToSection = (e) => {
@@ -25,20 +26,21 @@ const LandingPage = ({ home }) => {
       <WavyBackground className="w-screen ">
         <div className="flex flex-col items-center justify-center w-full ">
           <div
-            className="flex justify-around w-full mb-24 text-4xl px-10 py-8 font-bold"
+            className="flex items-center justify-around w-full mb-24 text-4xl px-10 py-8 font-bold"
             style={{ background: "rgba(255, 255, 255, 0.4)" }}
           >
             {" "}
             {/* Use inline style for semi-transparent background */}
             <a href="#counselling" onClick={handleScrollToSection}>
-              <h1
-                className="underline underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200"
+              <CustomHeading text={home.counselling} />
+              {/* <h1
+                className="underline flex flex-wrap w-min underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200"
                 style={{ opacity: 1 }}
               >
                 {home.counselling}
-              </h1>
+              </h1> */}
             </a>
-            <Link href="/business">
+            <Link href="/supervision">
               <h1
                 className="underline underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200"
                 style={{ opacity: 1 }}
