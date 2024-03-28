@@ -34,8 +34,12 @@ const InfoSection = ({ counselling }) => {
   return (
     <>
       <InfoItem {...section1} />
-      <InfoItem {...section2} />
-      <InfoItem {...section3} />
+      <div className="blob">
+        <InfoItem {...section2} />
+      </div>
+      <div className="wave">
+        <InfoItem {...section3} />
+      </div>
     </>
   );
 };

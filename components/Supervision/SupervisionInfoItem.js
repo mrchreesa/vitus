@@ -3,8 +3,8 @@ import React from "react";
 const SupervisionInfoItem = ({ title, text, image, imageAlt, reverse }) => {
   return (
     <div
-      className={` flex flex-col h-full ${
-        reverse ? "md:flex-row-reverse md:mr-10" : "md:flex-row md:ml-10"
+      className={`wave flex flex-col h-full ${
+        reverse ? "md:flex-row-reverse md:mr-10" : "md:flex-row md:pl-10"
       } w-full mt-8 `}
     >
       <div className="w-full md:flex-1 flex items-center font-mont text-green">

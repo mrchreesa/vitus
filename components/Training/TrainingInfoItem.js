@@ -4,7 +4,7 @@ const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
   return (
     <div
       className={`flex flex-col h-screen ${
-        reverse ? "md:flex-row-reverse md:mr-10" : "md:flex-row md:ml-10"
+        reverse ? "md:flex-row-reverse md:mr-10" : "md:flex-row md:pl-10"
       } w-full mt-8 `}
     >
       <div className="w-full md:flex-1 flex items-center font-mont text-green">

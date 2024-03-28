@@ -3,8 +3,8 @@ import React from "react";
 const InfoItem = ({ title, text, image, imageAlt, reverse }) => {
   return (
     <div
-      className={`flex flex-col ${
-        reverse ? "md:flex-row-reverse md:mr-10" : "md:flex-row md:ml-10"
+      className={` flex flex-col ${
+        reverse ? "md:flex-row-reverse md:mr-10" : "md:flex-row md:pl-10"
       } w-full mt-8 md:mt-16`}
     >
       <div className="w-full md:flex-1 flex items-center font-mont text-green">

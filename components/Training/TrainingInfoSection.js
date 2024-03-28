@@ -43,10 +43,17 @@ const TrainingInfoSection = ({ training }) => {
 
   return (
     <>
-      <TrainingInfoItem {...section1} />
+      <div className="blob">
+        <TrainingInfoItem {...section1} />
+      </div>
+
       <TrainingInfoItem {...section2} />
-      <TrainingInfoItem {...section3} />
-      <TrainingInfoItem {...section4} />
+      <div className="blob">
+        <TrainingInfoItem {...section3} />
+      </div>
+      <div className="wave">
+        <TrainingInfoItem {...section4} />
+      </div>
     </>
   );
 };

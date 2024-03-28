@@ -48,7 +48,7 @@ module.exports = {
         "screen-64": "calc(100vh - 64px)",
       },
       backgroundImage: {
-        bg: "url('/maze.jpeg')",
+        bg: "url('/maze.jpg')",
         bgFlag: "url('/bg-flag.svg')",
         gbFlag: "url('/brit-flag.svg')",
         waves: "url('/stacked-waves.svg')",

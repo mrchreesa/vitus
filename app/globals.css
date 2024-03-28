@@ -17,13 +17,25 @@ html {
 }
 
 body {
-  background-color: rgb(182, 222, 188, 0.5) !important;
+  background-color: #b6debc80 !important;
+
+  overflow-x: hidden !important;
+}
+.wave {
+  width: 100% !important;
   background-image: url(/blurry-gradient.svg);
+  background-size: cover;
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.blob {
+  width: 100% !important;
+  background-image: url(/blob.svg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  overflow-x: hidden !important;
 }
 .fp-watermark {
   display: none !important;
@@ -31,7 +43,9 @@ body {
 body {
   color: #ecf5f8 !important;
 }
-
+.body {
+  color: #d6ecd8;
+}
 .opac {
   opacity: 1 !important;
 }
