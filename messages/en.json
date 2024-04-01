@@ -57,5 +57,26 @@
         "description": "The program has a proven effect on improving couple’s communication and relationships and helping partners overcome crises and divisions in marital relations. It is based on emotionally focused therapy.\n\nMore specifically, this program is aimed at helping couples:\ndiscover and address negative dynamics that lead to feeling disconnected, hurt and alone.\nUnderstand and voice feelings and needs in ways that bring them closer to each other.\nBegin to repair past hurts and injuries.\nStrengthen or rebuild the trust between each other.\nRenew the strength of their emotional connection.\nStrengthen bonding through physical affection and sex."
       }
     }
-  }
+  },
+    "ContactForm": {
+   "landing": {
+      "title": "Contact Us",
+      "description": "If you would like to make an inquiry about psychological counselling, please fill out the contact form with information about the type of counselling you are interested in and we will contact you."
+    },
+    "supervision": {
+      "title": "Contact Us",
+      "description": "If you would like to inquire about individual supervision or team supervision, please fill out the contact form with more detailed information and we will contact you."
+    },
+    "trainings": {
+      "title": "Contact Us",
+      "description": "If you would like to make an individual inquiry about one of the trainings we provide, or request training for your team of professionals, please fill out the contact form."
+    },
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit"
+    },
+    "Address": {
+      "address": "Fridtjof Nansen 17, Sofia, Bulgaria"
+    }
 }

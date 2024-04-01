@@ -3,7 +3,7 @@ import Link from "next/link";
 import { WavyBackground } from "./ui/wavy-background";
 import CustomHeading from "./CustomHeading";
 
-const LandingPage = ({ home }) => {
+const LandingPage = ({ home, address }) => {
   const handleScrollToSection = (e) => {
     e.preventDefault(); // Prevent the default anchor link behavior
 
@@ -61,7 +61,9 @@ const LandingPage = ({ home }) => {
             className="flex bg-white text-green px-4"
             style={{ background: "rgba(255, 255, 255, 0.7)" }}
           >
-            <h3>1234 Some Street, Some City, Some Country</h3>
+            <a href="#map" onClick={handleScrollToSection}>
+              <h3>{address}</h3>
+            </a>
           </div>
         </div>
       </WavyBackground>

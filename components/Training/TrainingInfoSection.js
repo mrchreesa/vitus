@@ -2,12 +2,10 @@ import React from "react";
 import TrainingInfoItem from "./TrainingInfoItem";
 
 const TrainingInfoSection = ({ training }) => {
-  // Images
-  const russianDollsImage = "../path-to-your-image/russian-dolls-image.jpeg"; // Update with the correct path
-  const sandTraysImage = "../path-to-your-image/sand-trays-image.jpeg"; // Update with the correct path
-  const clientsCreativityImage =
-    "../path-to-your-image/clients-creativity-image.jpeg"; // Update with the correct path
-
+  const russianDollsImage = "/Matryoshka.jpg";
+  const sandTraysImage = "/Sand.jpg";
+  const clientsCreativityImage = "/Creativity.jpg";
+  const hold = "/Hold.jpg";
   // Content for sections
   const section1 = {
     title: training.trainingForCPD.russianDolls.title,
@@ -36,14 +34,14 @@ const TrainingInfoSection = ({ training }) => {
   const section4 = {
     title: training.couples.title,
     text: training.couples.description,
-    image: null,
+    image: hold,
     imageAlt: "Seminar for couples",
     reverse: true,
   };
 
   return (
     <>
-      <div className="blob">
+      <div className="blob pt-16 md:pt-0">
         <TrainingInfoItem {...section1} />
       </div>
 

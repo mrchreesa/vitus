@@ -87,9 +87,9 @@ export const WavyBackground = ({
   let animationId: number;
   const render = () => {
     ctx.fillStyle = "transparent";
-    ctx.globalAlpha = 0.1;
+    ctx.globalAlpha = 0.2;
     ctx.fillRect(0, 0, w, h);
-    drawWave(3);
+    drawWave(4);
     animationId = requestAnimationFrame(render);
   };
 

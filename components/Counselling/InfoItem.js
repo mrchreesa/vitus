@@ -15,12 +15,12 @@ const InfoItem = ({ title, text, image, imageAlt, reverse }) => {
           <p className="text-base md:text-lg mb-4">{text}</p>
         </div>
       </div>
-      <div className="w-full md:flex-1">
-        {/* <img
+      <div className="w-full md:w-1/2 flex justify-center items-center md:p-10">
+        <img
           src={image}
           alt={imageAlt}
-          className="w-full h-auto md:h-full object-cover"
-        /> */}
+          className="w-full h-auto object-cover"
+        />
       </div>
     </div>
   );

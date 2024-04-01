@@ -1,18 +1,24 @@
 "use client";
-import { useState } from "react";
 import LandingPage from "./LandingPage";
 import InfoSection from "./InfoSection";
 import React from "react";
-import ContactUs from "./ContactUs";
+import ContactUs from "../ContactUs";
 
-const CounsellingContainer = ({ home, counselling }) => {
+const CounsellingContainer = ({ home, counselling, contact, address }) => {
   return (
     <>
-      <LandingPage home={home} />
+      <LandingPage home={home} address={address} />
       <div id="counselling">
         <InfoSection counselling={counselling} />
       </div>
-      <ContactUs />
+      <ContactUs
+        title={contact.title}
+        description={contact.description}
+        name={contact.name}
+        email={contact.email}
+        message={contact.message}
+        submit={contact.submit}
+      />
     </>
   );
 };

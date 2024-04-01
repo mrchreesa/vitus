@@ -4,6 +4,18 @@ import CounsellingContainer from "../../components/Counselling/CounsellingContai
 export default function Index() {
   const t = useTranslations("Home");
   const i = useTranslations("CounsellingServices");
+  const j = useTranslations("ContactForm");
+  const k = useTranslations("Address");
+
+  const address = k("address");
+  const contact = {
+    title: j("landing.title"),
+    description: j("landing.description"),
+    name: j("name"),
+    email: j("email"),
+    message: j("message"),
+    submit: j("submit"),
+  };
 
   const counselling = {
     section1: {
@@ -28,7 +40,12 @@ export default function Index() {
 
   return (
     <>
-      <CounsellingContainer home={home} counselling={counselling} />
+      <CounsellingContainer
+        home={home}
+        counselling={counselling}
+        contact={contact}
+        address={address}
+      />
     </>
   );
 }
