@@ -3,7 +3,7 @@ import SupervisionInfoItem from "./SupervisionInfoItem";
 
 const SupervisionInfoSection = ({ supervision }) => {
   // Images
-  const supervisionImg = "../path-to-your-image/russian-dolls-image.jpeg"; // Update with the correct path
+  const supervisionImg = "/supervision.jpeg";
 
   // Content for sections
   const section1 = {

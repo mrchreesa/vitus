@@ -19,7 +19,7 @@ const InfoItem = ({ title, text, image, imageAlt, reverse }) => {
         <img
           src={image}
           alt={imageAlt}
-          className="w-full h-auto object-cover"
+          className="w-[70%] h-auto object-cover"
         />
       </div>
     </div>

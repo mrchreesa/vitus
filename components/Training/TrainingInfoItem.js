@@ -22,7 +22,7 @@ const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
         <img
           src={image}
           alt={imageAlt}
-          className="w-full h-auto md:h-1/2 object-cover" // Adjust `md:h-1/2` as needed to control the image size on larger screens.
+          className="w-[90%] h-auto md:h-1/2 object-cover" // Adjust `md:h-1/2` as needed to control the image size on larger screens.
         />
       </div>
     </div>

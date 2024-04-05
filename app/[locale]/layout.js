@@ -36,7 +36,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
   const navigation = [
     { name: t("aboutMe"), href: "/about", current: false },
     { name: t("blog"), href: "#", current: false },
-    { name: t("contacts"), href: "#", current: false },
+    { name: t("contacts"), href: "/contacts", current: false },
     { name: t("events"), href: "/events", current: false },
   ];
   const enquiry = t("enquiry");

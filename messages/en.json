@@ -78,5 +78,12 @@
     },
     "Address": {
       "address": "Fridtjof Nansen 17, Sofia, Bulgaria"
+    },
+    "Contacts":{
+      "contacts": "Contacts",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address"
     }
+    
 }
