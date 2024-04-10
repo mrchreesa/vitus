@@ -22,4 +22,47 @@ export async function getEvents() {
     }`
   );
 }
+
+export async function getBlogs() {
+  const client = createClient({
+    projectId,
+    dataset,
+    apiVersion,
+    useCdn: false, // Set to false to avoid using the CDN and its caching
+  });
+
+  return client.fetch(
+    groq`*[_type == "blog"]  {
+      _id,
+      _createdAt,
+      title,
+      author,
+      description,
+      "image": image.asset->url,
+      "slug": slug.current,
+    }`
+  );
+}
+
+export async function getBlog(slug) {
+  const client = createClient({
+    projectId,
+    dataset,
+    apiVersion,
+    useCdn: false, // Set to false to avoid using the CDN and its caching
+  });
+
+  return client.fetch(
+    groq`*[_type == "blog" && slug.current == $slug][0] {
+      _id,
+      _createdAt,
+      title,
+      author,
+      description,
+      "image": image.asset->url,
+      "slug": slug.current,
+    }`,
+    { slug }
+  );
+}
 export const dynamic = "force-dynamic";

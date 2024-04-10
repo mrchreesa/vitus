@@ -35,7 +35,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
   const t = useTranslations("Nav");
   const navigation = [
     { name: t("aboutMe"), href: "/about", current: false },
-    { name: t("blog"), href: "#", current: false },
+    { name: t("blog"), href: "/blog", current: false },
     { name: t("contacts"), href: "/contacts", current: false },
     { name: t("events"), href: "/events", current: false },
   ];

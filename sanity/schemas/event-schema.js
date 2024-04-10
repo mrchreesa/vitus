@@ -43,7 +43,7 @@ const event = {
           title: "Alt",
           type: "string",
           options: {
-            isHighlighted: true,
+            // isHighlighted: true,
           },
         },
       ],
