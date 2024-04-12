@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import moment from "moment";
+import Link from "next/link";
 import placeholder from "@/public/collection1.png";
 
 const EventCard = ({
@@ -61,9 +62,12 @@ const EventCard = ({
               {truncateText(description, 120)}
             </p>
             <div className="flex flex-grow"></div>
-            <button className="bg-greenLight w-max  hover:bg-green hover:text-white text-green font-bold mt-2 py-2 px-4 rounded-full transition-all duration-200">
+            <Link
+              href={`/events/${slug}`}
+              className="bg-greenLight w-max  hover:bg-green hover:text-white text-green font-bold mt-2 py-2 px-4 rounded-full transition-all duration-200"
+            >
               Read more
-            </button>
+            </Link>
             <div className="flex flex-row items-center mt-4 text-gray-700">
               <div className="w-1/2">{location}</div>
             </div>

@@ -2,34 +2,36 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const MorePosts = ({ data }) => {
-  console.log(data);
+const MorePosts = ({ data, currentSlug }) => {
+  let postsMinusCurrent;
+  data.forEach((post, index) => {
+    if (post.slug === currentSlug) {
+      postsMinusCurrent = data.filter((_, i) => i !== index);
+    }
+  });
   return (
     <>
       <div className="mx-auto mb-32 grid text-green grid-cols-1 gap-y-20 md:grid-cols-2 md:gap-x-16 md:gap-y-4 lg:gap-x-32 max-w-[1200px]">
-        {data?.map((post) => {
+        {postsMinusCurrent?.map((post) => {
           const { _id, title, slug, image, description, author } = post;
           return (
             <article key={_id} className="flex flex-col mb-8 md:mb-16 lg:mb-32">
               <Link
-                href={`/posts/${slug}`}
+                href={`/blog/${slug}`}
                 className="group block shadow-md transition-shadow duration-200 hover:shadow-lg"
               >
                 <div className="relative overflow-hidden w-full h-56 sm:h-72 md:h-96">
                   <Image
                     className="object-cover w-full h-full"
-                    // width={2000}
-                    // height={1000}
+                    width={2000}
+                    height={1000}
                     alt={title}
                     src={image}
-                    layout="fill" // This is important to make the image fill the container
+                    // layout="fill" // This is important to make the image fill the container
                   />
                 </div>
-
                 <h3 className="text-balance my-3 text-3xl leading-snug px-2">
-                  <Link href={`/posts/${slug}`} className="hover:underline">
-                    {title}
-                  </Link>
+                  {title}
                 </h3>
                 <div className="mb-4 text-lg">
                   {/* <DateComponent dateString={post.date} /> */}

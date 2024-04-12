@@ -1,8 +1,8 @@
-import BlogWrapper from "@/components/Blog/BlogWrapper";
 import React from "react";
+import BlogLandingWrapper from "@/components/Blog/BlogLandingWrapper";
 
 const Blog = () => {
-  return <BlogWrapper />;
+  return <BlogLandingWrapper />;
 };
 
 export default Blog;

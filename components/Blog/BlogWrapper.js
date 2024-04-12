@@ -6,8 +6,7 @@ import BlogComponent from "./BlogComponent";
 const BlogWrapper = async ({ slug }) => {
   const blogs = await getBlogs();
   const blog = await getBlog(slug);
-  console.log(blogs);
-  return <BlogComponent blogs={blogs} blog={blog} />;
+  return <BlogComponent blogs={blogs} blog={blog} currentSlug={slug} />;
 };
 
 export default BlogWrapper;
