@@ -2,20 +2,17 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const MorePosts = ({ data, currentSlug }) => {
-  let postsMinusCurrent;
-  data.forEach((post, index) => {
-    if (post.slug === currentSlug) {
-      postsMinusCurrent = data.filter((_, i) => i !== index);
-    }
-  });
+const MorePosts = ({ data }) => {
   return (
     <>
-      <div className="mx-auto mb-32 grid text-green grid-cols-1 gap-y-20 md:grid-cols-2 md:gap-x-16 md:gap-y-4 lg:gap-x-32 max-w-[1200px]">
-        {postsMinusCurrent?.map((post) => {
+      <div className="mx-10 mb-32 grid text-green grid-cols-1 gap-y-20 md:grid-cols-2 md:gap-x-16 md:gap-y-4 lg:gap-x-32 max-w-[1200px]">
+        {data?.map((post) => {
           const { _id, title, slug, image, description, author } = post;
           return (
-            <article key={_id} className="flex flex-col mb-8 md:mb-16 lg:mb-32">
+            <article
+              key={_id}
+              className="flex  flex-col mb-8 md:mb-16 lg:mb-32"
+            >
               <Link
                 href={`/blog/${slug}`}
                 className="group block shadow-md transition-shadow duration-200 hover:shadow-lg"

@@ -4,6 +4,7 @@ import BlogPost from "./BlogPost";
 
 const BlogLanding = ({ blogs }) => {
   const postsMinusFirst = blogs.slice(1);
+  console.log(postsMinusFirst);
   return (
     <>
       <BlogPost blog={blogs[0]} />

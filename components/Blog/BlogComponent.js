@@ -3,11 +3,16 @@ import BlogPost from "./BlogPost";
 import MorePosts from "./MorePosts";
 
 const BlogComponent = ({ blogs, blog, currentSlug }) => {
-  // console.log(blog);
+  let postsMinusCurrent;
+  data.forEach((post, index) => {
+    if (post.slug === currentSlug) {
+      postsMinusCurrent = data.filter((_, i) => i !== index);
+    }
+  });
   return (
     <>
       <BlogPost blog={blog} />
-      <MorePosts data={blogs} currentSlug={currentSlug} />
+      <MorePosts data={postsMinusCurrent} />
     </>
   );
 };
