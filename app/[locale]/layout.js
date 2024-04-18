@@ -36,10 +36,18 @@ export default function LocaleLayout({ children, params: { locale } }) {
   const navigation = [
     { name: t("aboutMe"), href: "/about", current: false },
     { name: t("blog"), href: "/blog", current: false },
-    { name: t("contacts"), href: "/contacts", current: false },
     { name: t("events"), href: "/events", current: false },
+    { name: t("services"), href: "/services", current: false },
+    { name: t("contacts"), href: "/contacts", current: false },
   ];
   const enquiry = t("enquiry");
+
+  const j = useTranslations("Home");
+  const services = {
+    counselling: j("counselling"),
+    business: j("business"),
+    training: j("training"),
+  };
   return (
     <html
       lang={locale}
@@ -47,10 +55,15 @@ export default function LocaleLayout({ children, params: { locale } }) {
     >
       <head>
         <link rel="preload" href="/maze.jpeg" as="image" />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
       </head>
       <body>
-        <NavBar locale={locale} navigation={navigation} enquiry={enquiry} />
+        <NavBar
+          locale={locale}
+          navigation={navigation}
+          enquiry={enquiry}
+          services={services}
+        />
 
         {children}
       </body>

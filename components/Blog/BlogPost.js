@@ -4,6 +4,7 @@ import Image from "next/image";
 import moment from "moment";
 
 const BlogPost = ({ blog }) => {
+  console.log(blog);
   const date = moment(blog._createdAt).format("MMMM Do, YYYY");
   return (
     <div className="container mx-auto px-5 text-green max-w-[1300px]">

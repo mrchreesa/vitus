@@ -1,17 +1,18 @@
 "use client";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logoEn from "../../public/vitus-en.png";
 import logoBg from "../../public/vitus-bg.png";
 import Image from "next/image";
 import Link from "next/link";
 import ToggleButton from "./ToggleLang";
+import DropdownServices from "./DropdownServices";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function NavBar({ locale, navigation, enquiry }) {
+export default function NavBar({ locale, navigation, enquiry, services }) {
   return (
     <Disclosure
       as="nav"
@@ -52,22 +53,38 @@ export default function NavBar({ locale, navigation, enquiry }) {
                 </div>
                 <div className="flex flex-grow"></div>
                 <div className="hidden sm:ml-6 sm:flex font-mont sm:items-center sm:justify-center ">
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "bg-green text-white"
-                            : "text-gray-300 hover:bg-green hover:text-white transition-all duration-200",
-                          "rounded-md px-3 py-2 text-sm font-medium"
-                        )}
-                        aria-current={item.current ? "page" : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
+                  <div className="flex space-x-4 items-center">
+                    {navigation.map((item) =>
+                      item.href === "/services" ? (
+                        <>
+                          <DropdownServices
+                            name={item.name}
+                            key={item.name}
+                            services={services}
+                            locale={locale}
+                          />
+                          {/* <ChevronDownIcon
+                            className=" h-6 w-6 animate-fade"
+                            aria-hidden="true"
+                          /> */}
+                        </>
+                      ) : (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className={classNames(
+                            item.current
+                              ? "bg-green text-white"
+                              : "text-gray-300 hover:bg-green hover:text-white transition-all duration-200",
+                            "rounded-md px-3 py-2 text-sm font-medium"
+                          )}
+                          aria-current={item.current ? "page" : undefined}
+                        >
+                          {item.name}
+                        </Link>
+                      )
+                    )}
+
                     <div className="flex items-center justify-center mb-1">
                       {/* Facebook icon */}
                       <div className="ml-4 mr-6">
@@ -96,6 +113,7 @@ export default function NavBar({ locale, navigation, enquiry }) {
                     </div>
                   </div>
                 </div>
+
                 <div className="flex flex-grow"></div>
 
                 <div className="hidden sm:flex items-center justify-center">

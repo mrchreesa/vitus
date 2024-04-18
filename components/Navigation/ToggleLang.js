@@ -11,7 +11,6 @@ const ToggleButton = ({ locale }) => {
   if (pathWithoutLocale === "") {
     pathWithoutLocale = "/";
   }
-  console.log(pathWithoutLocale);
   const [isChecked, setIsChecked] = useState(locale === "en" ? true : false);
   const newLocale = locale === "en" ? "bg" : "en";
   const handleCheckboxChange = () => {

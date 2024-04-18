@@ -14,6 +14,23 @@ const blog = {
       type: "string",
     },
     {
+      name: "Language",
+      title: "Language",
+      type: "object",
+      fields: [
+        {
+          name: "en_site",
+          title: "English",
+          type: "boolean",
+        },
+        {
+          name: "bg_site",
+          title: "Bulgarian",
+          type: "boolean",
+        },
+      ],
+    },
+    {
       name: "description",
       title: "Description",
       type: "text",

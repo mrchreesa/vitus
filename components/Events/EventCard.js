@@ -16,7 +16,6 @@ const EventCard = ({
 }) => {
   // Parse the string into a Moment object
   const dateTime = moment.utc(date); // Use .utc() to parse in UTC mode
-
   // Extract and format year, month, day
   const year = dateTime.year();
   const month = dateTime.format("MMMM");
