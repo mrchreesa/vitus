@@ -3,6 +3,7 @@ import Image from "next/image";
 import moment from "moment";
 
 const EventPost = ({ event }) => {
+  console.log(event);
   const date = moment(event.date).format("MMMM Do, YYYY, HH:mm ");
   return (
     <div className="mt-[10%] xl:mt-[8%]  mx-auto px-5 text-green max-w-[1300px]">

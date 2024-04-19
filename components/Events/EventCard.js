@@ -54,16 +54,16 @@ const EventCard = ({
             <div className="md:text-xl">{time}</div>
           </div>
           <div className="p-4 flex bg-white flex-col font-normal h-[50vh] xl:h-[45vh] max-h-[350px] overflow-hide text-gray-800 min-w-full md:w-3/4">
-            <h1 className="mb-2 text-3xl font-bold leading-none mt-1 tracking-tight text-gray-800">
+            <h1 className="mb-2 text-2xl font-bold w-[70%] xl:w-[80%] leading-tight mt-1 tracking-tight text-gray-800">
               {name}
             </h1>
-            <p className="leading-normal opacity-50 line-clamp-[5] w-3/4 font-medium	text-md">
+            <p className="leading-snug opacity-80 line-clamp-[4] xl:line-clamp-[5] w-3/4 font-medium	text-md">
               {truncateText(description, 120)}
             </p>
             <div className="flex flex-grow"></div>
             <Link
               href={`/events/${slug}`}
-              className="bg-greenLight w-max  hover:bg-green hover:text-white text-green font-bold mt-2 py-2 px-4 rounded-full transition-all duration-200"
+              className="bg-greenLight w-max  hover:bg-green hover:text-white text-green font-bold py-2 px-4 rounded-full transition-all duration-200"
             >
               Read more
             </Link>

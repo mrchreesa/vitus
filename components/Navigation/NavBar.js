@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logoEn from "../../public/vitus-en.png";
@@ -56,18 +57,14 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                   <div className="flex space-x-4 items-center">
                     {navigation.map((item) =>
                       item.href === "/services" ? (
-                        <>
+                        <React.Fragment key={item.name}>
                           <DropdownServices
-                            name={item.name}
                             key={item.name}
+                            name={item.name}
                             services={services}
                             locale={locale}
                           />
-                          {/* <ChevronDownIcon
-                            className=" h-6 w-6 animate-fade"
-                            aria-hidden="true"
-                          /> */}
-                        </>
+                        </React.Fragment>
                       ) : (
                         <Link
                           key={item.name}
