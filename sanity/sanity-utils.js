@@ -15,6 +15,7 @@ export async function getEvents() {
       _createdAt,
       name,
       date,
+      language,
       location,
       description,
       "image": image.asset->url,

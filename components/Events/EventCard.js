@@ -36,7 +36,7 @@ const EventCard = ({
     <div
       className={`h-screen w-screen flex  items-center justify-center  font-mont text-lg  `}
     >
-      <div className=" flex flex-col w-full h-[80%] mt-12 justify-center items-center rounded shadow-lg overflow-hidden sm:w-[70%] lg:w-1/2 max-w-[1200px]">
+      <div className=" flex flex-col w-full md:h-[80%] mt-28 md:mt-12 justify-center items-center rounded shadow-lg overflow-hidden sm:w-[70%] lg:w-1/2 max-w-[1200px]">
         <Image
           src={image || placeholder}
           alt=" image "
@@ -54,10 +54,10 @@ const EventCard = ({
             <div className="md:text-xl">{time}</div>
           </div>
           <div className="p-4 flex bg-white flex-col font-normal h-[50vh] xl:h-[45vh] max-h-[350px] overflow-hide text-gray-800 min-w-full md:w-3/4">
-            <h1 className="mb-2 text-2xl font-bold w-[70%] xl:w-[80%] leading-tight mt-1 tracking-tight text-gray-800">
+            <h1 className="mb-2 text-2xl font-bold md:w-[70%] xl:w-[80%] leading-tight mt-1 tracking-tight text-gray-800">
               {name}
             </h1>
-            <p className="leading-snug opacity-80 line-clamp-[4] xl:line-clamp-[5] w-3/4 font-medium	text-md">
+            <p className="leading-snug opacity-80 line-clamp-[4] 2xl:line-clamp-[5] md:w-3/4 font-medium	text-md">
               {truncateText(description, 120)}
             </p>
             <div className="flex flex-grow"></div>

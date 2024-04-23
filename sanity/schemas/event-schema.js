@@ -26,17 +26,17 @@ const event = {
       type: "string",
     },
     {
-      name: "Language",
+      name: "language",
       title: "Language",
       type: "object",
       fields: [
         {
-          name: "en_site",
+          name: "en",
           title: "English",
           type: "boolean",
         },
         {
-          name: "bg_site",
+          name: "bg",
           title: "Bulgarian",
           type: "boolean",
         },

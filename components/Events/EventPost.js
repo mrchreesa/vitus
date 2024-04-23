@@ -1,15 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import moment from "moment";
+import { renderDescriptionWithLineBreaks } from "@/app/lib/funcs";
 
 const EventPost = ({ event }) => {
-  console.log(event);
+  // console.log(event.description);
   const date = moment(event.date).format("MMMM Do, YYYY, HH:mm ");
+
   return (
     <div className="mt-[10%] xl:mt-[8%]  mx-auto px-5 text-green max-w-[1300px]">
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row max-h-[70vh]">
         <div className="mb-8 sm:mx-0 md:mb-16 md:w-1/2">
-          <div className="shadow-md rounded-md transition-shadow duration-200 group-hover:shadow-lg sm:mx-0">
+          <div className="shadow-md mt-10 md:mt-0 rounded-md transition-shadow duration-200 group-hover:shadow-lg sm:mx-0">
             <Image
               className="h-auto w-full rounded-md max-h-[500px] object-cover"
               width={2000}
@@ -20,8 +22,11 @@ const EventPost = ({ event }) => {
             />
           </div>
         </div>
-        <div className="md:w-1/2 md:pl-14 flex flex-col">
-          <h1 className="text-balance mt-4 md:mt-0 mb-8 md:mb-2 text-3xl font-bold leading-tight tracking-tighter md:text-7xl md:leading-none lg:text-8xl">
+        <div className="md:w-1/2 md:pl-14 flex flex-col ">
+          <h1
+            className=" mt-4 md:mt-0 mb-8 md:mb-2 text-3xl font-bold leading-tight
+           md:text-5xl  2xl:text-6xl"
+          >
             {event.name}
           </h1>
           <div className="flex flex-grow"></div>
@@ -35,7 +40,9 @@ const EventPost = ({ event }) => {
       </div>
       <div className="flex w-full justify-center">
         {event.description?.length && (
-          <div className=" max-w-2xl mb-10">{event.description}</div>
+          <div className="mt-48 md:mt-0 max-w-2xl mb-10">
+            {renderDescriptionWithLineBreaks(event.description)}
+          </div>
         )}
       </div>
     </div>
