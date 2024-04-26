@@ -56,7 +56,7 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                 <div className="hidden sm:ml-6 sm:flex font-mont sm:items-center sm:justify-center ">
                   <div className="flex space-x-4 items-center">
                     {navigation.map((item) =>
-                      item.href === "/services" ? (
+                      item.href === "/" ? (
                         <React.Fragment key={item.name}>
                           <DropdownServices
                             key={item.name}

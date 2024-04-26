@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import NavBar from "../../components/Navigation/NavBar";
 import { useTranslations } from "next-intl";
 import localFont from "next/font/local";
@@ -66,6 +67,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
         />
 
         {children}
+        <Footer navigation={navigation} locale={locale} />
       </body>
     </html>
   );

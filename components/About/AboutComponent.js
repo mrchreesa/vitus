@@ -2,7 +2,6 @@ import React from "react";
 import niki from "../../public/Niki.jpg";
 
 const AboutComponent = ({ about, title }) => {
-  console.log(niki);
   const paragraphs = about.split("\n\n");
 
   return (

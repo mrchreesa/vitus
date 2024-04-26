@@ -21,6 +21,7 @@ module.exports = {
         greenDark: "#06423a",
         green: "#09695e",
         greenLight: "#b6debc",
+        footer: "#85bc8b",
       },
       // that is animation class
       animation: {
