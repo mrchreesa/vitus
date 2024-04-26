@@ -57,7 +57,7 @@ const DropdownServices = ({ services, locale, name }) => {
       <button
         id="dropdownHoverButton"
         onMouseEnter={toggleOpen} // Show dropdown on mouse enter
-        className="text-gray-300 dark:bg-greenDark hover:text-white hover:dark:bg-green transition-all duration-200  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+        className="text-gray-300 bg-greenDark hover:text-white hover:bg-green transition-all duration-200  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
         type="button"
       >
         {name}{" "}
@@ -82,7 +82,7 @@ const DropdownServices = ({ services, locale, name }) => {
         <div
           id="dropdownHover"
           onMouseLeave={toggleClose} // Hide dropdown on mouse leave
-          className="z-10 absolute  divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-green"
+          className="z-10 absolute  divide-y divide-gray-100 rounded-lg shadow w-44 bg-green"
           style={{ top: "100%", left: 0 }}
         >
           <ul
@@ -92,7 +92,7 @@ const DropdownServices = ({ services, locale, name }) => {
             <li>
               <a
                 href="/"
-                className="block px-4 py-2 dark:hover:bg-greenDark dark:hover:text-white"
+                className="block px-4 py-2 hover:bg-greenDark hover:text-white"
               >
                 {services.counselling}
               </a>
@@ -100,7 +100,7 @@ const DropdownServices = ({ services, locale, name }) => {
             <li>
               <a
                 href="/supervision"
-                className="block px-4 py-2 dark:hover:bg-greenDark dark:hover:text-white"
+                className="block px-4 py-2 hover:bg-greenDark hover:text-white"
               >
                 {services.business}
               </a>
@@ -108,7 +108,7 @@ const DropdownServices = ({ services, locale, name }) => {
             <li>
               <a
                 href="/training"
-                className="block px-4 py-2 dark:hover:bg-greenDark dark:hover:text-white"
+                className="block px-4 py-2 hover:bg-greenDark hover:text-white"
               >
                 {services.training}
               </a>
@@ -117,25 +117,6 @@ const DropdownServices = ({ services, locale, name }) => {
         </div>
       )}
     </div>
-
-    // <form className="max-w-sm pr-1 hover:bg-green transition-all duration-200 rounded-md">
-    //   <label htmlFor="underline_select" className="sr-only">
-    //     Underline select
-    //   </label>
-    //   <select
-    //     id="underline_select"
-    //     className="bg-transparent border-none text-gray-300 hover:text-white px-3 py-2 text-sm font-medium"
-    //     value={selectedService}
-    //     onChange={handleSelectionChange}
-    //   >
-    //     <option value="services" disabled>
-    //       Services
-    //     </option>
-    //     <option value={services.counselling}>{services.counselling}</option>
-    //     <option value={services.business}>{services.business}</option>
-    //     <option value={services.training}>{services.training}</option>
-    //   </select>
-    // </form>
   );
 };
 

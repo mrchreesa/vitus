@@ -8,6 +8,14 @@
   }
 }
 
+/* :root {
+  --green-very-dark: #0a2b26;
+  --green-dark: #06423a;
+  --green: #09695e;
+  --green-light: #b6debc;
+  --footer-color: #85bc8b;
+} */
+
 .fp-table {
   justify-content: flex-start !important;
 }
