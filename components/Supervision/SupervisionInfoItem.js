@@ -1,6 +1,9 @@
 import React from "react";
 
 const SupervisionInfoItem = ({ title, text, image, imageAlt, reverse }) => {
+  const words = text.split(" "); // Split the string into an array of words by spaces
+  const firstTwoWords = words.slice(0, 2).join(" "); // Join the first two words into a string
+  const remainingWords = words.slice(2).join(" ");
   return (
     <div
       className={`wave flex flex-col h-full ${
@@ -12,7 +15,10 @@ const SupervisionInfoItem = ({ title, text, image, imageAlt, reverse }) => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
             {title}
           </h2>
-          <p className="text-base md:text-lg mb-4">{text}</p>
+          <p className="text-base md:text-lg mb-4 ">
+            <span className="font-bold mr-1">{firstTwoWords}</span>
+            {remainingWords}
+          </p>
         </div>
       </div>
       <div className="w-full md:w-[45%] flex justify-center items-center md:p-10">

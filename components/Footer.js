@@ -34,7 +34,7 @@ function Footer({ locale, navigation }) {
             </li>
           </ul>
         </div>
-        <hr className="my-6 border-green sm:mx-auto  lg:my-8" />
+        <hr className="my-4 border-green sm:mx-auto " />
         <span className="block text-sm  sm:text-center ">
           © Vitus™. All Rights Reserved.
         </span>
