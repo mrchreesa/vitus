@@ -26,7 +26,7 @@ const LandingPage = ({ home, address }) => {
       <WavyBackground className="w-screen ">
         <div className="flex flex-col items-center justify-center w-full ">
           <div
-            className="flex flex-col sm:flex-row items-center justify-around w-full mb-26 sm:mb-14 px-10 py-8 text-4xl font-bold"
+            className="flex flex-col sm:flex-row items-center justify-around w-full mb-24 sm:mb-10 px-10 py-8 text-4xl font-bold"
             style={{ background: "rgba(255, 255, 255, 0.4)" }}
           >
             <a href="#counselling" onClick={handleScrollToSection}>
@@ -47,11 +47,11 @@ const LandingPage = ({ home, address }) => {
         </div>
       </WavyBackground>
       <div
-        className="flex bg-white mb-[10%] justify-center w-1/2 text-green px-4"
+        className="flex bg-white mb-[10%] justify-center  md:w-1/2 text-green px-4"
         style={{ background: "rgba(255, 255, 255, 0.8)" }}
       >
         <a href="#map" onClick={handleScrollToSection}>
-          <h3>{address}</h3>
+          <h3 className="text-center">{address}</h3>
         </a>
       </div>
     </div>
