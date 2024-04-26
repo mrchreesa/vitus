@@ -24,18 +24,22 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
           <div className="mx-auto   max-w-7xl px-2 sm:px-6 lg:px-8 font-mont z-100">
             <div className="relative  flex h-16 items-center justify-between z-10">
               {/* Mobile menu button*/}
+
               <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-greenDark hover:text-white focus:outline-none ">
                   <span className="absolute -inset-0.5 " />
                   <span className="sr-only">Open main menu</span>
+                  <div className="mr-4">
+                    <ToggleButton locale={locale} />
+                  </div>
                   {open ? (
                     <XMarkIcon
-                      className="block h-6 w-6 animate-fade"
+                      className="block h-7 w-7 animate-fade"
                       aria-hidden="true"
                     />
                   ) : (
                     <Bars3Icon
-                      className="block h-6 w-6 animate-fade"
+                      className="block h-7 w-7 animate-fade"
                       aria-hidden="true"
                     />
                   )}

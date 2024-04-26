@@ -7,7 +7,7 @@ const ContactsComponent = ({ address, contacts, contact }) => {
     <>
       <div className="font-mont text-green flex text-xl flex-col justify-center items-center text-center h-screen p-5">
         <div>
-          <h1 className="mt-20 text-3xl mb-4 underline underline-offset-[8px] decoration-1">
+          <h1 className="md:mt-20 text-3xl mb-4 underline underline-offset-[8px] decoration-1">
             {contacts.title}
           </h1>
           <p className="pb-2">{contacts.phone}: +359 123123123</p>

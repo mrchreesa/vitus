@@ -7,7 +7,7 @@ function CustomHeading({ text }) {
     // Only one word, apply underline directly
     return (
       <h1
-        className="underline underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200"
+        className="underline underline-offset-[5px] sm:underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200"
         style={{ opacity: 1 }}
       >
         {words[0]}

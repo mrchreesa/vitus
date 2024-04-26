@@ -22,51 +22,38 @@ const LandingPage = ({ home, address }) => {
     }
   };
   return (
-    <div className="h-screen  bg-bg bg-center bg-no-repeat bg-cover bg-fixed flex font-mont">
+    <div className="h-screen  flex-col items-center  bg-bg bg-center sm:bg-center bg-no-repeat bg-cover bg-fixed flex font-mont">
       <WavyBackground className="w-screen ">
         <div className="flex flex-col items-center justify-center w-full ">
           <div
-            className="flex items-center justify-around w-full mb-24 text-4xl px-10 py-8 font-bold"
+            className="flex flex-col sm:flex-row items-center justify-around w-full mb-26 sm:mb-14 px-10 py-8 text-4xl font-bold"
             style={{ background: "rgba(255, 255, 255, 0.4)" }}
           >
-            {" "}
-            {/* Use inline style for semi-transparent background */}
             <a href="#counselling" onClick={handleScrollToSection}>
               <CustomHeading text={home.counselling} />
-              {/* <h1
-                className="underline flex flex-wrap w-min underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200"
-                style={{ opacity: 1 }}
-              >
-                {home.counselling}
-              </h1> */}
             </a>
             <Link href="/supervision">
-              <h1
-                className="underline underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200"
-                style={{ opacity: 1 }}
-              >
+              <h1 className="mt-6 sm:mt-0 underline underline-offset-4 sm:underline-offset-[18px] hover:underline-offset-[12px] sm:hover:underline-offset-3 decoration-1 text-green hover:text-greenVeryDark transition-all duration-200">
                 {home.business}
               </h1>
             </Link>
             <Link href="/training">
-              <h1
-                className="underline underline-offset-[18px] hover:underline-offset-[12px] decoration-1 text-green hover:text-greenVeryDark transition-all duration-200"
-                style={{ opacity: 1 }}
-              >
+              <h1 className="mt-6 sm:mt-0 underline underline-offset-4 sm:underline-offset-[18px] hover:underline-offset-[12px] sm:hover:underline-offset-3 decoration-1 text-green hover:text-greenVeryDark transition-all duration-200">
                 {home.training}
               </h1>
             </Link>
           </div>
-          <div
-            className="flex bg-white text-green px-4"
-            style={{ background: "rgba(255, 255, 255, 0.7)" }}
-          >
-            <a href="#map" onClick={handleScrollToSection}>
-              <h3>{address}</h3>
-            </a>
-          </div>
+          {/* <div className="flex flex-grow h-64"></div> */}
         </div>
       </WavyBackground>
+      <div
+        className="flex bg-white mb-[10%] justify-center w-1/2 text-green px-4"
+        style={{ background: "rgba(255, 255, 255, 0.8)" }}
+      >
+        <a href="#map" onClick={handleScrollToSection}>
+          <h3>{address}</h3>
+        </a>
+      </div>
     </div>
   );
 };
