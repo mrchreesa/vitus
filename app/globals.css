@@ -61,3 +61,7 @@ body {
 .custom-heading:hover .underline-last {
   text-decoration: underline;
 }
+
+.bg-mobile-scroll {
+  background-attachment: scroll;
+}

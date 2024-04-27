@@ -22,7 +22,7 @@ const LandingPage = ({ home, address }) => {
     }
   };
   return (
-    <div className="h-screen  flex-col items-center  bg-bg bg-center sm:bg-center bg-no-repeat bg-cover bg-fixed flex font-mont">
+    <div className="h-screen  flex-col items-center  bg-bg bg-center sm:bg-center bg-mobile-scroll bg-no-repeat bg-cover sm:bg-fixed flex font-mont">
       <WavyBackground className="w-screen ">
         <div className="flex flex-col items-center justify-center w-full ">
           <div
