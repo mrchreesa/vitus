@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import axios from "axios";
+import { usePathname } from "next/navigation";
 
 const ContactUs = ({ title, description, name, email, message, submit }) => {
   const [formState, setFormState] = useState({
@@ -8,7 +10,12 @@ const ContactUs = ({ title, description, name, email, message, submit }) => {
     message: "",
   });
   const [errors, setErrors] = useState({});
-
+  const pathname = usePathname();
+  function getStringAfterLastSlash(url) {
+    const parts = url.split("/");
+    return parts[parts.length - 1];
+  }
+  const path = getStringAfterLastSlash(pathname);
   // Validates the form inputs
   const validateForm = () => {
     let errors = {};
@@ -39,7 +46,16 @@ const ContactUs = ({ title, description, name, email, message, submit }) => {
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
       console.log("Form data:", formState);
-      // Process the form submission here (e.g., send data to an API)
+      const data = { ...formState, path: path };
+
+      axios.post("/api/contact", data).then((res) => {
+        if (res.status === 200) {
+          alert("Message sent successfully");
+          setFormState({ name: "", email: "", message: "" });
+        } else {
+          alert("Failed to send message");
+        }
+      });
     }
   };
 

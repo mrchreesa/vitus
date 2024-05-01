@@ -56,6 +56,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
     >
       <head>
         <link rel="preload" href="/maze.jpeg" as="image" />
+        <link rel="shortcut icon" href="/logo.png" />
         <meta charSet="UTF-8" />
       </head>
       <body>
