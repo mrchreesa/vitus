@@ -15,10 +15,21 @@ const generateEmailContent = (data) => {
   );
 
   const htmlData = `
-      <h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS.name}</h3><p class="form-answer" align="left">${data.name}</p>
-    <h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS.email}</h3><p class="form-answer" align="left">${data.email}</p>
-       <h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS.path}</h3><p class="form-answer" align="left">${data.path}</p>
-    <h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS.message}</h3><p class="form-answer" align="left">${data.message}</p>
+      <h3 class="form-heading" align="left">${
+        CONTACT_MESSAGE_FIELDS.name
+      }</h3><p class="form-answer" align="left">${data.name}</p>
+    <h3 class="form-heading" align="left">${
+      CONTACT_MESSAGE_FIELDS.email
+    }</h3><p class="form-answer" align="left">${data.email}</p>
+       <h3 class="form-heading" align="left">${
+         CONTACT_MESSAGE_FIELDS.path
+       }</h3><p class="form-answer" align="left">${
+    (data.path == "bg" ? "Landing Page" : data.path) ||
+    (data.path == "en" ? "Landing Page" : data.path)
+  }</p>
+    <h3 class="form-heading" align="left">${
+      CONTACT_MESSAGE_FIELDS.message
+    }</h3><p class="form-answer" align="left">${data.message}</p>
   `;
 
   return {
