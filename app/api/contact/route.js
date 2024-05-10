@@ -49,7 +49,10 @@ export const POST = async (req, res) => {
       transporter.sendMail({
         ...mailOptions,
         ...generateEmailContent(data),
-        subject: `Enquiry by ${data.name} from ${data.path}`,
+        subject: `Enquiry by ${data.name} from ${
+          (data.path == "bg" && "Landing Page") ||
+          (data.path == "en" && "Landing Page")
+        }`,
       });
       return new Response("Email sent", {
         status: 200,
