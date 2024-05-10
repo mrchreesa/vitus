@@ -30,7 +30,7 @@ const generateEmailContent = (data) => {
 export const POST = async (req, res) => {
   if (req.method === "POST") {
     const data = await req.json();
-    console.log("Data:", data);
+    // console.log("Data:", data);
     if (!data) {
       return new Response("Bad request", {
         status: 400,
@@ -46,13 +46,24 @@ export const POST = async (req, res) => {
     //   },
     // });
     try {
-      transporter.sendMail({
-        ...mailOptions,
-        ...generateEmailContent(data),
-        subject: `Enquiry by ${data.name} from ${
-          (data.path == "bg" ? "Landing Page" : data.path) ||
-          (data.path == "en" ? "Landing Page" : data.path)
-        }`,
+      await new Promise((resolve, reject) => {
+        transporter.sendMail(
+          {
+            ...mailOptions,
+            ...generateEmailContent(data),
+            subject: `Enquiry by ${data.name} from ${
+              (data.path == "bg" ? "Landing Page" : data.path) ||
+              (data.path == "en" ? "Landing Page" : data.path)
+            }`,
+          },
+          (err, info) => {
+            if (err) {
+              reject(err);
+            } else {
+              resolve(info);
+            }
+          }
+        );
       });
       return new Response("Email sent", {
         status: 200,
@@ -60,6 +71,21 @@ export const POST = async (req, res) => {
           "Content-Type": "text/plain",
         },
       });
+
+      // transporter.sendMail({
+      //   ...mailOptions,
+      //   ...generateEmailContent(data),
+      //   subject: `Enquiry by ${data.name} from ${
+      //     (data.path == "bg" ? "Landing Page" : data.path) ||
+      //     (data.path == "en" ? "Landing Page" : data.path)
+      //   }`,
+      // });
+      // return new Response("Email sent", {
+      //   status: 200,
+      //   headers: {
+      //     "Content-Type": "text/plain",
+      //   },
+      // });
     } catch (error) {
       return new Response("Failed to send email", {
         status: 500,
