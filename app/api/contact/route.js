@@ -50,8 +50,8 @@ export const POST = async (req, res) => {
         ...mailOptions,
         ...generateEmailContent(data),
         subject: `Enquiry by ${data.name} from ${
-          (data.path == "bg" && "Landing Page") ||
-          (data.path == "en" && "Landing Page")
+          (data.path == "bg" ? "Landing Page" : data.path) ||
+          (data.path == "en" ? "Landing Page" : data.path)
         }`,
       });
       return new Response("Email sent", {
