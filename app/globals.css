@@ -65,3 +65,16 @@ body {
 .bg-mobile-scroll {
   background-attachment: scroll;
 }
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 25s linear infinite;
+}

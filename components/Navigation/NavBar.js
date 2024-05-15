@@ -154,6 +154,13 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
               ))}
             </div>
           </Disclosure.Panel>
+          <div className="bg-green-700 text-white overflow-hidden whitespace-nowrap relative h-5 flex items-center">
+            <div className="banner-text text-gray-300 absolute whitespace-nowrap animate-scroll-left font-mont pb-1">
+              Център Витус предоставя индивидуално и семейно психологическо
+              консултиране, както и, провежда продължаващи обучения и супервизия
+              на специалисти от помагащите професии.
+            </div>
+          </div>
         </>
       )}
     </Disclosure>
