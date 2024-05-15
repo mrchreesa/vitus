@@ -91,7 +91,7 @@ const DropdownServices = ({ services, locale, name }) => {
           >
             <li>
               <a
-                href="/"
+                href="/#counselling"
                 className="block px-4 py-2 hover:bg-greenDark hover:text-white"
               >
                 {services.counselling}

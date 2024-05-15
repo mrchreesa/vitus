@@ -10,7 +10,7 @@ const ContactsComponent = ({ address, contacts, contact }) => {
           <h1 className="md:mt-20 text-3xl mb-4 underline underline-offset-[8px] decoration-1">
             {contacts.title}
           </h1>
-          <p className="pb-2">{contacts.phone}: +359 123123123</p>
+          {/* <p className="pb-2">{contacts.phone}: +359 123123123</p> */}
           <p className="pb-2">{contacts.email}: centrevitus@gmail.com</p>
           <p>
             {contacts.address}: {address}

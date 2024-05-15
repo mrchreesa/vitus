@@ -31,7 +31,10 @@ const AboutComponent = ({ about, title }) => {
                   // Split each paragraph by single newline for line breaks within the paragraph
                   <p
                     className={`mb-4 ${
-                      index == paragraphs.length - 1 ? "w-[90%]" : null
+                      index == paragraphs.length - 1 ||
+                      index == paragraphs.length - 2
+                        ? "lg:w-[90%]"
+                        : null
                     }`}
                     key={index}
                   >
