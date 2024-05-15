@@ -26,7 +26,7 @@ const LandingPage = ({ home, address }) => {
       <WavyBackground className="w-screen ">
         <div className="flex flex-col items-center justify-center w-full ">
           <div
-            className="flex flex-col sm:flex-row items-center justify-around w-full mb-24 sm:mb-4 px-10 py-8 text-4xl font-bold"
+            className="flex flex-col sm:flex-row items-center justify-around w-full mb-24 sm:mb-4 px-10 py-8 text-3xl md:text-4xl font-bold"
             style={{ background: "rgba(255, 255, 255, 0.4)" }}
           >
             <a href="#counselling" onClick={handleScrollToSection}>

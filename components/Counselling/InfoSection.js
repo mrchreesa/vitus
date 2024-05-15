@@ -34,6 +34,13 @@ const InfoSection = ({ counselling }) => {
 
   return (
     <>
+      <div className="border-b border-t border-greenDark mx-6 mt-8">
+        <p className="text-green font-mont font-bold mt-4 pb-4 px-4 text-xl">
+          Център Витус предоставя индивидуално и семейно психологическо
+          консултиране, както и провежда продължаващи обучения и супервизия на
+          специалисти от помагащите професии
+        </p>
+      </div>
       <InfoItem {...section1} />
       <div className="blob">
         <InfoItem {...section2} />
