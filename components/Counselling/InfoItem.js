@@ -9,7 +9,7 @@ const InfoItem = ({ title, text, image, imageAlt, reverse }) => {
     const regex = /\*([^*]+)\*/g;
     return description.replace(
       regex,
-      '<span class="font-bold italic">$1</span>'
+      '<span class="font-semibold italic">$1</span>'
     );
   }
 
