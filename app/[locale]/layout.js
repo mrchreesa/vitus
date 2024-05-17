@@ -8,9 +8,9 @@ const mont = localFont({
     {
       path: "../../public/fonts/Montserrat-VariableFont_wght.ttf",
     },
-    {
-      path: "../../public/fonts/Montserrat-Italic-VariableFont_wght.ttf",
-    },
+    // {
+    //   path: "../../public/fonts/Montserrat-Italic-VariableFont_wght.ttf",
+    // },
   ],
   variable: "--font-mont",
 });
