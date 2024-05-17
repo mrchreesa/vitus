@@ -7,10 +7,7 @@ const InfoItem = ({ title, text, image, imageAlt, reverse }) => {
   function highlightMarkedWords(description) {
     // Regular expression to find words between the special symbols (*)
     const regex = /\*([^*]+)\*/g;
-    return description.replace(
-      regex,
-      '<span class="font-semibold italic">$1</span>'
-    );
+    return description.replace(regex, '<span class="font-semibold">$1</span>');
   }
 
   const highlightedDescription = highlightMarkedWords(text);
