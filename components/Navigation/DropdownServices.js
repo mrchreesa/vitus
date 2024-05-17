@@ -57,8 +57,10 @@ const DropdownServices = ({ services, locale, name }) => {
       <button
         id="dropdownHoverButton"
         onMouseEnter={toggleOpen} // Show dropdown on mouse enter
+        // onMouseLeave={toggleClose} // Hide dropdown on mouse leave
         className="text-gray-300 bg-greenDark hover:text-white hover:bg-green transition-all duration-200  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
         type="button"
+        onClick={() => setIsOpen(!isOpen)}
       >
         {name}{" "}
         <svg
