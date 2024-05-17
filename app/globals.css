@@ -78,3 +78,7 @@ body {
 .animate-scroll-left {
   animation: scroll-left 25s linear infinite;
 }
+
+.highlight {
+  font-weight: bold;
+}
