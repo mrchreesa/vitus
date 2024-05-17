@@ -6,12 +6,10 @@ import localFont from "next/font/local";
 const mont = localFont({
   src: [
     {
-      path: "../../public/fonts/Mont.otf",
-      weight: "400",
+      path: "../../public/fonts/Montserrat-VariableFont_wght.ttf",
     },
     {
-      path: "../../public/fonts/Mont-Heavy.otf",
-      weight: "700",
+      path: "../../public/fonts/Montserrat-Italic-VariableFont_wght.ttf",
     },
   ],
   variable: "--font-mont",

@@ -48,11 +48,11 @@ const LandingPage = ({ home, address }) => {
       </WavyBackground>
       <div
         className="flex bg-white mb-[10%] justify-center  md:w-1/2 text-green px-4"
-        style={{ background: "rgba(255, 255, 255, 0.8)" }}
+        // style={{ background: "rgba(255, 255, 255, 0.8)" }}
       >
-        <a href="#map" onClick={handleScrollToSection}>
+        {/* <a href="#map" onClick={handleScrollToSection}>
           <h3 className="text-center">{address}</h3>
-        </a>
+        </a> */}
       </div>
     </div>
   );
