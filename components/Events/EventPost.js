@@ -2,8 +2,9 @@ import React from "react";
 import Image from "next/image";
 import moment from "moment";
 import { renderDescriptionWithLineBreaks } from "@/app/lib/funcs";
+import ContactUs from "../ContactUs";
 
-const EventPost = ({ event }) => {
+const EventPost = ({ event, contact }) => {
   // console.log(event.description);
   const date = moment(event.date).format("MMMM Do, YYYY, HH:mm ");
 
@@ -45,6 +46,14 @@ const EventPost = ({ event }) => {
           </div>
         )}
       </div>
+      <ContactUs
+        title={contact.title}
+        description={contact.description}
+        name={contact.name}
+        email={contact.email}
+        message={contact.message}
+        submit={contact.submit}
+      />
     </div>
   );
 };

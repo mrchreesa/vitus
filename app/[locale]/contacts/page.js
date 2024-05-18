@@ -14,8 +14,8 @@ const Contacts = () => {
     address: t("address"),
   };
   const contact = {
-    title: j("landing.title"),
-    description: j("landing.description"),
+    title: j("contacts.title"),
+    description: j("contacts.description"),
     name: j("name"),
     email: j("email"),
     message: j("message"),

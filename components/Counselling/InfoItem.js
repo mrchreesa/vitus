@@ -4,14 +4,14 @@ const InfoItem = ({ title, text, image, imageAlt, reverse }) => {
   // const words = text.split(" "); // Split the string into an array of words by spaces
   // const firstTwoWords = words.slice(0, 2).join(" "); // Join the first two words into a string
   // const remainingWords = words.slice(2).join(" ");
-  function highlightMarkedWords(description) {
-    // Regular expression to find words between the special symbols (*)
-    const regex = /\*([^*]+)\*/g;
-    return description.replace(regex, '<span class="font-semibold">$1</span>');
-  }
+  // function highlightMarkedWords(description) {
+  //   // Regular expression to find words between the special symbols (*)
+  //   const regex = /\*([^*]+)\*/g;
+  //   return description.replace(regex, '<span class="font-semibold">$1</span>');
+  // }
 
-  const highlightedDescription = highlightMarkedWords(text);
-
+  // const highlightedDescription = highlightMarkedWords(text);
+  const paragraphs = text.split("\n\n");
   return (
     <div
       className={` flex flex-col ${
@@ -24,11 +24,14 @@ const InfoItem = ({ title, text, image, imageAlt, reverse }) => {
             {title}
           </h2>
           <p className="text-base md:text-lg mb-4 ">
-            <span
+            {/* <span
               dangerouslySetInnerHTML={{ __html: highlightedDescription }}
-            ></span>
+            ></span> */}
             {/* <span className="font-bold mr-1">{firstTwoWords}</span>
             {remainingWords} */}
+            {paragraphs.map((paragraph) => (
+              <p className="mb-4">{paragraph}</p>
+            ))}
           </p>
         </div>
       </div>

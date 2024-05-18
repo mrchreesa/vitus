@@ -65,7 +65,7 @@ const EventCard = ({
               href={`/events/${slug}`}
               className="bg-greenLight w-max  hover:bg-green hover:text-white text-green font-bold py-2 px-4 rounded-full transition-all duration-200"
             >
-              Read more
+              Прочети повече
             </Link>
             <div className="flex flex-row items-center mt-4 text-gray-700">
               <div className="w-1/2">{location}</div>
