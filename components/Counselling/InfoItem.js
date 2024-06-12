@@ -30,7 +30,7 @@ const InfoItem = ({ title, text, image, imageAlt, reverse }) => {
             {/* <span className="font-bold mr-1">{firstTwoWords}</span>
             {remainingWords} */}
             {paragraphs.map((paragraph, i) => (
-              <p key={i} className="mb-0.5">
+              <p key={i} className="mb-0.3">
                 {paragraph}
               </p>
             ))}

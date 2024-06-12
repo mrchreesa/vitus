@@ -61,7 +61,7 @@ const ContactUs = ({ title, description, name, email, message, submit }) => {
 
   return (
     <div id="enquiry">
-      <section className="text-greenDark font-mont body-font relative bg-waves bg-cover bg-no-repeat bg-opacity-75">
+      <section className="text-green font-mont body-font relative bg-waves bg-cover bg-no-repeat bg-opacity-75">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 ">

@@ -7,6 +7,7 @@ export default function Index() {
   const j = useTranslations("ContactForm");
   const k = useTranslations("Address");
   const b = useTranslations("VitusInfo");
+  const v = useTranslations("Vision");
 
   const address = k("address");
   const contact = {
@@ -44,6 +45,11 @@ export default function Index() {
     description: b("description"),
   };
 
+  const vision = {
+    title: v("title"),
+    description: v("description"),
+  };
+
   return (
     <>
       <CounsellingContainer
@@ -52,6 +58,7 @@ export default function Index() {
         contact={contact}
         address={address}
         vitusInfo={vitusInfo}
+        vision={vision}
       />
     </>
   );

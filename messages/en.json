@@ -20,6 +20,10 @@
     "title": "Vitus Centre",
     "description": "Vitus Centre offers individual and family counselling, as well as supervision and trainings for professionals from the helping professions. Our counsellors are trained in the integrative approach- they combine different psychological techniques, in order to provide the best and unique care for each individual. Vitus Centre partners with international organisations, such as ‘Vital Connexions’ (Scotland), ‘Care4You’ (The Netherlands), to exchange therapeutic and training experience. "
   },
+  "Vision":{
+    "title": "Our Vision",
+    "description": "We believe that every person is valuable and has a unique contribution to the welfare of society. Therefore, one of our main goals is to support each individual to overcome and to cope with life crises and difficulties, as well as traumatic experiences, and develop psychological resilience, in order to reach their full potential.\n\nWe chose the tree as a metaphor for humans, which if planted by streams of water (safe and supporting environment), will yield its fruit in season, its leaves will not wither, and in all that it does, it will prosper."
+  },
   "CounsellingServices": {
     "individualCounselling": {
       "title": "Individual Counselling",

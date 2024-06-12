@@ -1,7 +1,7 @@
 import React from "react";
 import InfoItem from "./InfoItem";
 
-const InfoSection = ({ counselling, vitusInfo }) => {
+const InfoSection = ({ counselling, vitusInfo, vision }) => {
   // Images
   const personal = "/personal.jpg";
   const family = "/fam.jpg";
@@ -47,9 +47,21 @@ const InfoSection = ({ counselling, vitusInfo }) => {
       <div className="blob">
         <InfoItem {...section2} />
       </div>
-      <div className="wave">
+      <div className="">
         <InfoItem {...section3} />
       </div>
+
+      <div className="blob flex flex-col md:flex-row md:pl-10 w-full">
+        <div className="w-full md:flex-1  flex items-center font-mont text-green">
+          <div className="p-8 md:p-12 lg:p-16">
+            <h2 className="text-2xl md:text-3xl text-center lg:text-4xl font-bold mb-4 md:mb-6">
+              {vision.title}
+            </h2>
+            <p className="text-base md:text-lg mb-4 ">{vision.description}</p>
+          </div>
+        </div>
+      </div>
+
       <div id="map" className="wave w-full h-96 relative">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.781460830443!2d23.319086975577466!3d42.68717137116427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa850dd1274219%3A0x228cbf4458dc9ff!2sSofia%20Center%2C%20Fridtjof%20Nansen%20St%2017%2C%201142%20Sofia%2C%20Bulgaria!5e0!3m2!1sen!2suk!4v1711982439647!5m2!1sen!2suk"

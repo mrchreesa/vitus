@@ -10,12 +10,17 @@ const CounsellingContainer = ({
   contact,
   address,
   vitusInfo,
+  vision,
 }) => {
   return (
     <>
       <LandingPage home={home} address={address} />
       <div id="counselling">
-        <InfoSection counselling={counselling} vitusInfo={vitusInfo} />
+        <InfoSection
+          counselling={counselling}
+          vitusInfo={vitusInfo}
+          vision={vision}
+        />
       </div>
       <ContactUs
         title={contact.title}
