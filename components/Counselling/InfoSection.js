@@ -1,7 +1,7 @@
 import React from "react";
 import InfoItem from "./InfoItem";
 
-const InfoSection = ({ counselling }) => {
+const InfoSection = ({ counselling, vitusInfo }) => {
   // Images
   const personal = "/personal.jpg";
   const family = "/fam.jpg";
@@ -31,14 +31,16 @@ const InfoSection = ({ counselling }) => {
     imageAlt: "Couples counselling session",
     reverse: false,
   };
+  const words = vitusInfo.description.split(" "); // Split the string into an array of words by spaces
+  const firstTwoWords = words.slice(0, 2).join(" "); // Join the first two words into a string
+  const remainingWords = words.slice(2).join(" ");
 
   return (
     <>
       <div className=" border-greenDark  px-6 blob ">
         <p className="text-green font-mont font-medium  py-12 px-4 text-xl">
-          Център Витус предоставя индивидуално и семейно психологическо
-          консултиране, както и провежда продължаващи обучения и супервизия на
-          специалисти от помагащите професии
+          <span className="font-bold mr-1">{firstTwoWords}</span>
+          {remainingWords}
         </p>
       </div>
       <InfoItem {...section1} />
