@@ -8,21 +8,21 @@ const SupervisionInfoItem = ({ title, text, image, imageAlt, reverse }) => {
     <div
       className={`wave flex flex-col h-full ${
         reverse ? "md:flex-row-reverse md:mr-10" : "md:flex-row md:pl-10"
-      } w-full mt-8 `}
+      } w-full mt-20 md:mt-8 `}
     >
       <div className="w-full md:flex-1 flex items-center font-mont text-green">
         <div className="p-8 md:p-12 lg:p-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
             {title}
           </h2>
-          <p className="text-base md:text-lg mb-4 ">
+          <div className="text-base md:text-lg mb-4 ">
             <span className="font-bold mr-1">{firstTwoWords}</span>
             {remainingWords.split("\n\n").map((paragraph, i) => (
               <p key={i} className="mb-0.3">
                 {paragraph}
               </p>
             ))}
-          </p>
+          </div>
         </div>
       </div>
       <div className="w-full md:w-[45%] flex justify-center items-center md:p-10">

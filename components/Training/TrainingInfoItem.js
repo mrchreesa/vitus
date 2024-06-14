@@ -16,13 +16,13 @@ const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
           <h2 className="text-2xl md:text-2xl lg:text-2xl md:mt-20 font-bold mb-4 md:mb-6">
             {title}
           </h2>
-          <p className="text-base md:text-[15px] mb-4 ">
+          <div className="text-base md:text-[15px] mb-4 ">
             {paragraphs.map((paragraph, i) => (
               <p key={i} className="mb-0.3">
                 {paragraph}
               </p>
             ))}
-          </p>
+          </div>
         </div>
       </div>
       <div className="w-full md:w-1/2 flex justify-center items-center md:p-10">

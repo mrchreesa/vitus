@@ -83,6 +83,10 @@
       "title": "Contact Us",
       "description": "If you would like to make an individual inquiry about one of the trainings we provide, or request training for your team of professionals, please fill out the contact form."
     },
+      "contacts": {
+      "title": "Contact Us",
+      "description": "If you would like to make an inquiry about a counselling session, please fill out the contact form and we will contact you."
+    },
     "name": "Name",
     "email": "Email",
     "message": "Message",
