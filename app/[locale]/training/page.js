@@ -23,6 +23,10 @@ const Training = () => {
       title: j("SeminarForCouples.couplesSeminar.title"),
       description: j("SeminarForCouples.couplesSeminar.description"),
     },
+    parentsSeminar: {
+      title: j("parentsSeminar.title"),
+      description: j("parentsSeminar.description"),
+    },
   };
   return <TrainingComponent training={training} />;
 };

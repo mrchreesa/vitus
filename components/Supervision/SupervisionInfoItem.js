@@ -17,7 +17,11 @@ const SupervisionInfoItem = ({ title, text, image, imageAlt, reverse }) => {
           </h2>
           <p className="text-base md:text-lg mb-4 ">
             <span className="font-bold mr-1">{firstTwoWords}</span>
-            {remainingWords}
+            {remainingWords.split("\n\n").map((paragraph, i) => (
+              <p key={i} className="mb-0.3">
+                {paragraph}
+              </p>
+            ))}
           </p>
         </div>
       </div>

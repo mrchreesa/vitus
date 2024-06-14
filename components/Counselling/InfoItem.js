@@ -24,11 +24,6 @@ const InfoItem = ({ title, text, image, imageAlt, reverse }) => {
             {title}
           </h2>
           <p className="text-base md:text-lg mb-4 ">
-            {/* <span
-              dangerouslySetInnerHTML={{ __html: highlightedDescription }}
-            ></span> */}
-            {/* <span className="font-bold mr-1">{firstTwoWords}</span>
-            {remainingWords} */}
             {paragraphs.map((paragraph, i) => (
               <p key={i} className="mb-0.3">
                 {paragraph}

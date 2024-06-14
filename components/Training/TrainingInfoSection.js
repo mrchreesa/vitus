@@ -6,6 +6,7 @@ const TrainingInfoSection = ({ training }) => {
   const sandTraysImage = "/Sand.jpg";
   const clientsCreativityImage = "/Creativity.jpg";
   const hold = "/Hold.jpg";
+  const parents = "/parents.jpeg";
   // Content for sections
   const section1 = {
     title: training.trainingForCPD.russianDolls.title,
@@ -39,6 +40,14 @@ const TrainingInfoSection = ({ training }) => {
     reverse: true,
   };
 
+  const section5 = {
+    title: training.parentsSeminar.title,
+    text: training.parentsSeminar.description,
+    image: parents,
+    imageAlt: "Seminar for parants and teens",
+    reverse: false,
+  };
+
   return (
     <>
       <div className="blob pt-16 md:pt-0">
@@ -49,8 +58,11 @@ const TrainingInfoSection = ({ training }) => {
       <div className="blob">
         <TrainingInfoItem {...section3} />
       </div>
-      <div className="wave">
+      <div className="blob">
         <TrainingInfoItem {...section4} />
+      </div>
+      <div className="wave py-10">
+        <TrainingInfoItem {...section5} />
       </div>
     </>
   );

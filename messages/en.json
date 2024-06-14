@@ -62,9 +62,13 @@
     "SeminarForCouples": {
       "couplesSeminar": {
         "title": "“Hold me tight” - A seminar for couples",
-         "description": "“Hold me tight” is an evidence-based programme, effective in improving couples' communication and relationships, and helping partners overcome crises and divisions in marital relations. It is based on emotionally focused therapy. More specifically, this program is aimed at helping couples discover and address negative dynamics that lead to feeling disconnected, hurt, and alone; understand and voice feelings and needs in ways that bring them closer to each other; begin to repair past hurts and injuries; strengthen or rebuild the trust between each other; renew the strength of their emotional connection; and strengthen bonding through physical affection and sex."
+        "description": "“Hold me tight” is an evidence-based programme, effective in improving couples' communication and relationships, and helping partners overcome crises and divisions in marital relations. It is based on emotionally focused therapy. More specifically, this program is aimed at helping couples:\n\n- discover and address negative dynamics that lead to feeling disconnected, hurt, and alone;\n\n- understand and voice feelings and needs in ways that bring them closer to each other;\n\n- begin to repair past hurts and injuries;\n\n- strengthen or rebuild the trust between each other;\n\n- renew the strength of their emotional connection;\n\n- and strengthen bonding through physical affection and sex."
+     }
+    },
+      "parentsSeminar": {
+        "title": "Healthy Relationships Between Parents and Teenagers",
+        "description": "The training aims to help parents build close relationships with their growing teenagers. The training helps parents to:\n\n- understand the basic stages of adolescent development;\n\n- understand the teenagers’ drive towards separation from their parents, and how this can happen in a healthy way, in order to maintain the parent-child relationship during the turbulent transition period;\n\n- develop skills to understand and communicate with their children during conflicts and disagreements, as well as special skills for reconciliation and forgiveness after conflict and hurt;\n\n- understand the emotional reactions and behaviour of teenagers in times of crisis and how to stand by them as significant adults.\n\nTowards the end of the training, a joint meeting with the teenagers is organised to help them understand their parents' reactions and to open up to reconciliation after conflict and hurt. At this age, teenagers believe that parents are not capable of understanding them, so they do not want to share with them, they shut down and distance themselves. The training helps to break this vicious cycle."
       }
-    }
   },
     "ContactForm": {
    "landing": {
