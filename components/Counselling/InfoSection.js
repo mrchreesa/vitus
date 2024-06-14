@@ -1,7 +1,12 @@
 import React from "react";
 import InfoItem from "./InfoItem";
 
-const InfoSection = ({ counselling, vitusInfo, vision }) => {
+const InfoSection = ({
+  counselling,
+  vitusInfo,
+  vision,
+  handleScrollToSection,
+}) => {
   // Images
   const personal = "/personal.jpg";
   const family = "/fam.jpg";
@@ -43,8 +48,9 @@ const InfoSection = ({ counselling, vitusInfo, vision }) => {
           {remainingWords}
         </p>
       </div>
-      <InfoItem {...section1} />
-      <div className="blob">
+      <div id="counselling">
+        <InfoItem {...section1} />
+        <div className="blob"></div>
         <InfoItem {...section2} />
       </div>
       <div className="">

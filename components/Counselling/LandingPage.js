@@ -3,24 +3,7 @@ import Link from "next/link";
 import { WavyBackground } from "./ui/wavy-background";
 import CustomHeading from "./CustomHeading";
 
-const LandingPage = ({ home, address }) => {
-  const handleScrollToSection = (e) => {
-    e.preventDefault(); // Prevent the default anchor link behavior
-
-    const targetId = e.currentTarget.getAttribute("href").slice(1); // Remove '#' from the href to get the ID
-    const element = document.getElementById(targetId);
-
-    if (element) {
-      const elementPosition =
-        element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - 70; // Calculate the position with -50px offset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
+const LandingPage = ({ home, handleScrollToSection }) => {
   return (
     <div className="h-screen  flex-col items-center  bg-bg bg-center sm:bg-center bg-mobile-scroll bg-no-repeat bg-cover sm:bg-fixed flex font-mont">
       <WavyBackground className="w-screen ">
