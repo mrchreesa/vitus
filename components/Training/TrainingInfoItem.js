@@ -11,7 +11,7 @@ const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
       } 
       justify-center items-center mx-auto max-w-[1600px] w-full pt-5 md:h-screen`}
     >
-      <div className="w-full md:w-1/2 flex justify-center items-center text-green p-6 md:p-10">
+      <div className="w-full md:w-1/2 h-fit flex justify-center items-center text-green p-6 lg:p-10">
         <div>
           <h2 className="text-2xl md:text-2xl 2xl:text-3xl md:mt-6 font-bold mb-4 md:mb-6">
             {title}
@@ -25,7 +25,7 @@ const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
           </div>
         </div>
       </div>
-      <div className="w-full md:w-1/2 flex justify-center items-center md:p-10">
+      <div className="w-full md:w-1/2 flex justify-center items-center lg:p-10">
         <img
           src={image}
           alt={imageAlt}

@@ -25,7 +25,7 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
             <div className="relative  flex h-16 items-center justify-between z-10">
               {/* Mobile menu button*/}
 
-              <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-greenDark hover:text-white focus:outline-none ">
                   <span className="absolute -inset-0.5 " />
                   <span className="sr-only">Open main menu</span>
@@ -57,8 +57,8 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                   </Link>
                 </div>
                 <div className="flex flex-grow"></div>
-                <div className="hidden sm:ml-6 sm:flex font-mont sm:items-center sm:justify-center ">
-                  <div className="flex space-x-4 items-center">
+                <div className="hidden sm:ml-6 md:flex font-mont sm:items-center sm:justify-center ">
+                  <div className="flex lg:space-x-4 items-center">
                     {navigation.map((item) =>
                       item.href === "/" ? (
                         <React.Fragment key={item.name}>
@@ -77,7 +77,7 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                             item.current
                               ? "bg-green text-white"
                               : "text-gray-300 hover:bg-green hover:text-white transition-all duration-200",
-                            "rounded-md px-3 py-2 text-sm font-medium"
+                            "rounded-md px-3 py-2 text-sm font-medium whitespace-nowrap"
                           )}
                           aria-current={item.current ? "page" : undefined}
                         >
@@ -86,7 +86,7 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                       )
                     )}
 
-                    <div className="flex items-center justify-center mb-1">
+                    <div className="hidden lg:flex items-center justify-center mb-1">
                       {/* Facebook icon */}
                       <div className="ml-4 mr-6">
                         <a href="#">
@@ -117,14 +117,14 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
 
                 <div className="flex flex-grow"></div>
 
-                <div className="hidden sm:flex items-center justify-center">
+                <div className="hidden md:flex items-center justify-center">
                   <ToggleButton locale={locale} />
 
                   <a
                     href="#enquiry"
                     className={classNames(
                       "text-gray-300 hover:bg-green hover:text-white transition-all duration-200",
-                      "rounded-full border px-3 py-2 text-sm font-medium ml-5"
+                      "rounded-full border px-3 py-2 text-sm font-medium ml-5 hidden lg:block"
                     )}
                   >
                     {enquiry}
@@ -134,7 +134,7 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
             </div>
           </div>
           {/* Mobile menu, show/hide */}
-          <Disclosure.Panel className="sm:hidden ">
+          <Disclosure.Panel className="md:hidden ">
             <div className="space-y-1 px-2 pb-3 pt-2 font-mont animate-fade">
               {navigation.map((item) => (
                 <Disclosure.Button
