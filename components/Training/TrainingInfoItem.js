@@ -13,10 +13,10 @@ const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
     >
       <div className="w-full md:w-1/2 flex justify-center items-center text-green p-6 md:p-10">
         <div>
-          <h2 className="text-2xl md:text-2xl lg:text-2xl md:mt-20 font-bold mb-4 md:mb-6">
+          <h2 className="text-2xl md:text-2xl 2xl:text-3xl md:mt-6 font-bold mb-4 md:mb-6">
             {title}
           </h2>
-          <div className="text-base md:text-md mb-4 ">
+          <div className="text-base md:text-md 2xl:text-xl mb-4 ">
             {paragraphs.map((paragraph, i) => (
               <p key={i} className="mb-0.3">
                 {paragraph}
@@ -29,7 +29,7 @@ const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
         <img
           src={image}
           alt={imageAlt}
-          className="w-[90%] h-auto md:h-1/2 object-cover" // Adjust `md:h-1/2` as needed to control the image size on larger screens.
+          className="w-[90%] h-auto md:h-1/2 max-h-[65vh] object-cover" // Adjust `md:h-1/2` as needed to control the image size on larger screens.
         />
       </div>
     </div>
