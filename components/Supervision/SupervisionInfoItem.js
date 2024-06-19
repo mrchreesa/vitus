@@ -15,12 +15,16 @@ const SupervisionInfoItem = ({ title, text, image, imageAlt, reverse }) => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
             {title}
           </h2>
-          <div className="text-base md:text-lg mb-4 ">
+          <div className="text-base md:text-lg mb-4">
             <span className="font-bold mr-1">{firstTwoWords}</span>
             {remainingWords.split("\n\n").map((paragraph, i) => (
-              <p key={i} className="mb-0.3">
-                {paragraph}
-              </p>
+              <React.Fragment key={i}>
+                {i === 0 ? (
+                  <span className="inline">{paragraph}</span>
+                ) : (
+                  <p className="mt-4">{paragraph}</p>
+                )}
+              </React.Fragment>
             ))}
           </div>
         </div>

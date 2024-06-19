@@ -61,7 +61,7 @@ const TrainingInfoSection = ({ training }) => {
       <div className="blob">
         <TrainingInfoItem {...section4} />
       </div>
-      <div className="wave py-10">
+      <div className="wave py-5">
         <TrainingInfoItem {...section5} />
       </div>
     </>

@@ -9,14 +9,14 @@ const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
       className={`flex flex-col md:flex-row font-mont ${
         reverse ? "md:flex-row-reverse" : ""
       } 
-      justify-center items-center mx-auto max-w-[1600px] w-full pt-10 md:h-screen`}
+      justify-center items-center mx-auto max-w-[1600px] w-full pt-5 md:h-screen`}
     >
       <div className="w-full md:w-1/2 flex justify-center items-center text-green p-6 md:p-10">
         <div>
           <h2 className="text-2xl md:text-2xl lg:text-2xl md:mt-20 font-bold mb-4 md:mb-6">
             {title}
           </h2>
-          <div className="text-base md:text-[15px] mb-4 ">
+          <div className="text-base md:text-md mb-4 ">
             {paragraphs.map((paragraph, i) => (
               <p key={i} className="mb-0.3">
                 {paragraph}
