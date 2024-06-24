@@ -24,7 +24,9 @@ const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
                   paragraph.startsWith("-") ? "mb-0.3 indented" : "mb-0.3"
                 }
               >
-                {paragraph.substring(1).trim()}
+                {paragraph.startsWith("-")
+                  ? paragraph.substring(1).trim()
+                  : paragraph}
               </p>
             ))}
           </div>
