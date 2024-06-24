@@ -16,10 +16,15 @@ const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
           <h2 className="text-2xl md:text-2xl 2xl:text-3xl md:mt-6 font-bold mb-4 md:mb-6">
             {title}
           </h2>
-          <div className="text-base md:text-md 2xl:text-xl mb-4 ">
+          <div className="text-base md:text-md 2xl:text-xl mb-4">
             {paragraphs.map((paragraph, i) => (
-              <p key={i} className="mb-0.3">
-                {paragraph}
+              <p
+                key={i}
+                className={
+                  paragraph.startsWith("-") ? "mb-0.3 indented" : "mb-0.3"
+                }
+              >
+                {paragraph.substring(1).trim()}
               </p>
             ))}
           </div>

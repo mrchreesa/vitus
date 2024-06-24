@@ -82,3 +82,13 @@ body {
 .highlight {
   font-weight: bold;
 }
+.indented {
+  /* text-indent: -1em;  */
+  /* padding-left: 1em; */
+}
+
+.indented::before {
+  content: "-";
+  margin-left: 1em;
+  padding-right: 0.3em; /* Adds space between the hyphen and the text */
+}

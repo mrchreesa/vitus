@@ -89,7 +89,11 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                     <div className="hidden lg:flex items-center justify-center mb-1">
                       {/* Facebook icon */}
                       <div className="ml-4 mr-6">
-                        <a href="#">
+                        <a
+                          href="https://www.facebook.com/centrevitus"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-4 w-4 text-white "
@@ -101,7 +105,11 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                         </a>
                       </div>
                       {/* <!-- Instagram --> */}
-                      <a href="#">
+                      <a
+                        href="https://www.instagram.com/vitus.centre.ltd?igsh=MWU0ZHZibGE5dTFtdA%3D%3D&utm_source=qr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-4 w-4 text-white"

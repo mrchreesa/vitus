@@ -24,11 +24,17 @@ const InfoItem = ({ title, text, image, imageAlt, reverse }) => {
             {title}
           </h2>
           <div className="text-base md:text-lg mb-4 ">
-            {paragraphs.map((paragraph, i) => (
-              <p key={i} className="mb-0.3">
-                {paragraph}
-              </p>
-            ))}
+            {paragraphs.map((paragraph, i) =>
+              paragraph.startsWith("-") ? (
+                <p key={i} className="mb-0.3 ml-3">
+                  {paragraph}
+                </p>
+              ) : (
+                <p key={i} className="mb-0.3">
+                  {paragraph}
+                </p>
+              )
+            )}
           </div>
         </div>
       </div>
