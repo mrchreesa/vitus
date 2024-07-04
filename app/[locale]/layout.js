@@ -56,6 +56,8 @@ export default function LocaleLayout({ children, params: { locale } }) {
         <link rel="preload" href="/maze.jpeg" as="image" />
         <link rel="shortcut icon" href="/logo.png" />
         <meta charSet="UTF-8" />
+        <meta name="description" content="Individual and family counselling." />
+        <meta name="keywords" content="counselling, vitus, training" />
       </head>
       <body>
         <NavBar
