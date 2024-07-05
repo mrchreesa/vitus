@@ -28,6 +28,16 @@ const typo = localFont({
   ],
   variable: "--font-typo",
 });
+export const metadata = {
+  title: "Centre Vitus",
+  description: "Providing individual and family counselling",
+  openGraph: {
+    images: '/vitus-en.jpg',
+  },
+  icons: {
+    icon: "/vitus-en.jpg",
+  },
+};
 
 export default function LocaleLayout({ children, params: { locale } }) {
   // console.log(locale);
@@ -56,8 +66,8 @@ export default function LocaleLayout({ children, params: { locale } }) {
         <link rel="preload" href="/maze.jpeg" as="image" />
         <link rel="shortcut icon" href="/logo.png" />
         <meta charSet="UTF-8" />
-        <meta name="description" content="Individual and family counselling." />
-        <meta name="keywords" content="counselling, vitus, training" />
+        {/* <meta name="description" content="Individual and family counselling." />
+        <meta name="keywords" content="counselling, vitus, training" /> */}
       </head>
       <body>
         <NavBar
