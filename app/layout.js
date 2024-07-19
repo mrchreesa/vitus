@@ -8,7 +8,7 @@ export const metadata = {
     images: 'https://i.postimg.cc/DzHcq6yp/vitus-en.jpg',
   },
   icons: {
-    icon: "/vitus-en.jpg",
+    icon: "/logo.jpg",
   },
 };
 
