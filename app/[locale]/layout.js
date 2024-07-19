@@ -39,9 +39,9 @@ export const metadata = {
     card: "summary_large_image",
    
   },
-  // openGraph: {
-  //   images: "/opengraph-image.png",
-  // },
+  openGraph: {
+    images: "https://i.postimg.cc/3r6rFkPq/opengraph-image.png",
+  },
   icons: {
     icon: "/logo.png",
   },
@@ -71,7 +71,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
       lang={locale}
       className={`${mont.variable} font-sans ${typo.variable} font-sans`}
     >
-      <Head>
+      <head>
         {/* <title>{metadata.title}</title> */}
         <meta charSet="UTF-8" />
         <meta property="og:site_name" content={metadata.title}/>
@@ -82,31 +82,31 @@ export default function LocaleLayout({ children, params: { locale } }) {
    
 
         {/* <!-- Google / Search Engine Tags --> */}
-        {/* <meta itemprop="name" content="Centre Vitus" />
+        <meta itemprop="name" content="Centre Vitus" />
         <meta
           itemprop="description"
           content="Providing individual and family counselling"
         />
         <meta
           itemprop="image"
-          content="https://i.postimg.cc/3yjphgG2/vitus-en.jpg"
-        /> */}
+          content="https://i.postimg.cc/3r6rFkPq/opengraph-image.png"
+        />
 
         {/* <!-- Facebook Meta Tags --> */}
-        {/* <meta property="og:url" content="https://www.centrevitus.com/bg" />
+        <meta property="og:url" content="https://www.centrevitus.com/bg" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Centre Vitus" />
         <meta
           property="og:description"
           content="Providing individual and family counselling"
-        /> */}
-        {/* <meta
+        />
+        <meta
           property="og:image"
-          content="https://i.postimg.cc/3yjphgG2/vitus-en.jpg"
-        /> */}
+          content="https://i.postimg.cc/3r6rFkPq/opengraph-image.png"
+        />
 
         {/* <!-- Twitter Meta Tags --> */}
-        {/* <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Centre Vitus" />
         <meta
           name="twitter:description"
@@ -114,11 +114,11 @@ export default function LocaleLayout({ children, params: { locale } }) {
         />
         <meta
           name="twitter:image"
-          content="https://i.postimg.cc/3yjphgG2/vitus-en.jpg"
-        /> */}
+          content="https://i.postimg.cc/3r6rFkPq/opengraph-image.png"
+        />
 
         <link rel="preload" href="/maze.jpeg" as="image" />
-      </Head>
+      </head>
       <body>
         <NavBar
           locale={locale}
