@@ -2,16 +2,14 @@ import Footer from "@/components/Footer";
 import NavBar from "../../components/Navigation/NavBar";
 import { useTranslations } from "next-intl";
 import localFont from "next/font/local";
-import Head from "next/head"; // Import Head from next/head
+
 
 const mont = localFont({
   src: [
     {
       path: "../../public/fonts/Montserrat-VariableFont_wght.ttf",
     },
-    // {
-    //   path: "../../public/fonts/Montserrat-Italic-VariableFont_wght.ttf",
-    // },
+ 
   ],
   variable: "--font-mont",
 });
@@ -29,7 +27,9 @@ const typo = localFont({
   ],
   variable: "--font-typo",
 });
+
 export const metadata = {
+  // metadataBase: new URL('https://centrevitus.com'),
   title: {
     default: "Centre Vitus",
     template: "%s - Centre Vitus",
@@ -80,19 +80,19 @@ export default function LocaleLayout({ children, params: { locale } }) {
       <head>
         {/* <title>{metadata.title}</title> */}
         <meta charSet="UTF-8" />
-        <meta property="og:site_name" content={metadata.title} />
+        <meta property="og:site_name" content="Centre Vitus" />
         <meta property="og:url" content="https://www.centrevitus.com" />
         {/* <meta name="description" content={metadata.description} /> */}
         {/* <link rel="icon" href={metadata.icons.icon} /> */}
 
         {/* <!-- Google / Search Engine Tags --> */}
-        <meta itemprop="name" content="Centre Vitus" />
+        <meta itemProp="name" content="Centre Vitus" />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="Providing individual and family counselling"
         />
         <meta
-          itemprop="image"
+          itemProp="image"
           content="https://i.postimg.cc/3r6rFkPq/opengraph-image.png"
         />
 

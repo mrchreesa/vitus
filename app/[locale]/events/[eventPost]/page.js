@@ -1,6 +1,26 @@
 import EventPostWrapper from "@/components/Events/EventPostWrapper";
 import React from "react";
 import { useTranslations } from "next-intl";
+import { getEvent } from "@/sanity/sanity-utils";
+
+export async function generateMetadata({ params }) {
+  const slug = params.eventPost;
+  const event = await getEvent(slug);
+  return {
+    title: event.name,
+    description: event.description,
+    openGraph: {
+      images: [
+        {
+          url: event.image,
+          width: 1200,
+          height: 630,
+          alt: event.name,
+        },
+      ],
+    },
+  }
+}
 
 const EventPost = ({ params }) => {
   const j = useTranslations("ContactForm");
