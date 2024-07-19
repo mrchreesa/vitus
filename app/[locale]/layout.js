@@ -39,9 +39,9 @@ export const metadata = {
     card: "summary_large_image",
    
   },
-  openGraph: {
-    images: "https://i.postimg.cc/DzHcq6yp/vitus-en.jpg",
-  },
+  // openGraph: {
+  //   images: "https://i.postimg.cc/DzHcq6yp/vitus-en.jpg",
+  // },
   icons: {
     icon: "/logo.png",
   },
