@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import NavBar from "../../components/Navigation/NavBar";
 import { useTranslations } from "next-intl";
 import localFont from "next/font/local";
+import Head from "next/head"; // Import Head from next/head
 
 const mont = localFont({
   src: [
@@ -57,50 +58,34 @@ export default function LocaleLayout({ children, params: { locale } }) {
     business: j("business"),
     training: j("training"),
   };
+
   return (
-    <html
-      lang={locale}
-      className={`${mont.variable} font-sans, ${typo.variable} font-sans`}
-    >
-      <head>
-        <link rel="preload" href="/maze.jpeg" as="image" />
+    <html lang={locale} className={`${mont.variable} font-sans ${typo.variable} font-sans`}>
+      <Head>
+        <title>{metadata.title}</title>
         <meta charSet="UTF-8" />
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href={metadata.icons.icon} />
 
         {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="https://www.centrevitus.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Centre Vitus" />
-        <meta
-          property="og:description"
-          content="Providing individual and family counselling"
-        />
-        <meta
-          property="og:image"
-          content="https://i.postimg.cc/3yjphgG2/vitus-en.jpg"
-        />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content={metadata.openGraph.images} />
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="centrevitus.com" />
         <meta property="twitter:url" content="https://www.centrevitus.com" />
-        <meta name="twitter:title" content="Centre Vitus" />
-        <meta
-          name="twitter:description"
-          content="Providing individual and family counselling"
-        />
-        <meta
-          name="twitter:image"
-          content="https://i.postimg.cc/3yjphgG2/vitus-en.jpg"
-        />
-      </head>
-      <body>
-        <NavBar
-          locale={locale}
-          navigation={navigation}
-          enquiry={enquiry}
-          services={services}
-        />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content={metadata.openGraph.images} />
 
+        <link rel="preload" href="/maze.jpeg" as="image" />
+      </Head>
+      <body>
+        <NavBar locale={locale} navigation={navigation} enquiry={enquiry} services={services} />
         {children}
         <Footer navigation={navigation} locale={locale} />
       </body>
