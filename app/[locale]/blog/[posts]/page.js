@@ -1,9 +1,11 @@
 import React from "react";
 import BlogWrapper from "@/components/Blog/BlogWrapper";
 import { getBlog } from "@/sanity/sanity-utils";
-export async function generateMetadata({ params }) {
+
+export const generateMetadata = async ({ params }) => {
   const slug = params.eventPost;
   const blog = await getBlog(slug);
+  console.log(blog);
   return {
     title: blog.title,
     description: blog.description,

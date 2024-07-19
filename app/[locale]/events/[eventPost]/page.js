@@ -3,7 +3,8 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { getEvent } from "@/sanity/sanity-utils";
 
-export async function generateMetadata({ params }) {
+
+export const generateMetadata = async ({ params }) => {
   const slug = params.eventPost;
   const event = await getEvent(slug);
   return {
