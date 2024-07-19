@@ -30,11 +30,18 @@ const typo = localFont({
   variable: "--font-typo",
 });
 export const metadata = {
-  title: "Centre Vitus",
+  title: {
+    default: "Centre Vitus",
+    template: "%s - Centre Vitus"
+  },
   description: "Providing individual and family counselling",
-  // openGraph: {
-  //   images: "https://i.postimg.cc/3yjphgG2/vitus-en.jpg",
-  // },
+  twitter: {
+    card: "summary_large_image",
+   
+  },
+  openGraph: {
+    images: "https://i.postimg.cc/DzHcq6yp/vitus-en.jpg",
+  },
   icons: {
     icon: "/logo.png",
   },
@@ -65,18 +72,15 @@ export default function LocaleLayout({ children, params: { locale } }) {
       className={`${mont.variable} font-sans ${typo.variable} font-sans`}
     >
       <Head>
-        <title>{metadata.title}</title>
+        {/* <title>{metadata.title}</title> */}
         <meta charSet="UTF-8" />
-        <meta name="description" content={metadata.description} />
-        <link rel="icon" href={metadata.icons.icon} />
+        {/* <meta name="description" content={metadata.description} /> */}
+        {/* <link rel="icon" href={metadata.icons.icon} /> */}
 
-        <meta
-          name="description"
-          content="Providing individual and family counselling"
-        />
+   
 
         {/* <!-- Google / Search Engine Tags --> */}
-        <meta itemprop="name" content="Centre Vitus" />
+        {/* <meta itemprop="name" content="Centre Vitus" />
         <meta
           itemprop="description"
           content="Providing individual and family counselling"
@@ -84,23 +88,23 @@ export default function LocaleLayout({ children, params: { locale } }) {
         <meta
           itemprop="image"
           content="https://i.postimg.cc/3yjphgG2/vitus-en.jpg"
-        />
+        /> */}
 
         {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="https://www.centrevitus.com/bg" />
+        {/* <meta property="og:url" content="https://www.centrevitus.com/bg" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Centre Vitus" />
         <meta
           property="og:description"
           content="Providing individual and family counselling"
-        />
+        /> */}
         {/* <meta
           property="og:image"
           content="https://i.postimg.cc/3yjphgG2/vitus-en.jpg"
         /> */}
 
         {/* <!-- Twitter Meta Tags --> */}
-        <meta name="twitter:card" content="summary_large_image" />
+        {/* <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Centre Vitus" />
         <meta
           name="twitter:description"
@@ -109,7 +113,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
         <meta
           name="twitter:image"
           content="https://i.postimg.cc/3yjphgG2/vitus-en.jpg"
-        />
+        /> */}
 
         <link rel="preload" href="/maze.jpeg" as="image" />
       </Head>

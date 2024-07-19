@@ -2,6 +2,12 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import ContactsComponent from "@/components/Contacts/ContactsComponent";
 
+const metadata = {
+  title: "Contacts",
+  description: "Contact Centre Vitus",
+
+};
+
 const Contacts = () => {
   const k = useTranslations("Address");
   const t = useTranslations("Contacts");
