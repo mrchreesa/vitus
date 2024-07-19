@@ -74,6 +74,8 @@ export default function LocaleLayout({ children, params: { locale } }) {
       <Head>
         {/* <title>{metadata.title}</title> */}
         <meta charSet="UTF-8" />
+        <meta property="og:site_name" content={metadata.title}/>
+        <meta property="og:url" content="https://www.centrevitus.com"/>
         {/* <meta name="description" content={metadata.description} /> */}
         {/* <link rel="icon" href={metadata.icons.icon} /> */}
 
