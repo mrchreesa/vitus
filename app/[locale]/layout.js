@@ -32,15 +32,21 @@ const typo = localFont({
 export const metadata = {
   title: {
     default: "Centre Vitus",
-    template: "%s - Centre Vitus"
+    template: "%s - Centre Vitus",
   },
   description: "Providing individual and family counselling",
   twitter: {
     card: "summary_large_image",
-   
   },
   openGraph: {
-    images: "https://i.postimg.cc/3r6rFkPq/opengraph-image.png",
+    images: [
+      {
+        url: "https://i.postimg.cc/3r6rFkPq/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Preview of the website",
+      },
+    ],
   },
   icons: {
     icon: "/logo.png",
@@ -74,12 +80,10 @@ export default function LocaleLayout({ children, params: { locale } }) {
       <head>
         {/* <title>{metadata.title}</title> */}
         <meta charSet="UTF-8" />
-        <meta property="og:site_name" content={metadata.title}/>
-        <meta property="og:url" content="https://www.centrevitus.com"/>
+        <meta property="og:site_name" content={metadata.title} />
+        <meta property="og:url" content="https://www.centrevitus.com" />
         {/* <meta name="description" content={metadata.description} /> */}
         {/* <link rel="icon" href={metadata.icons.icon} /> */}
-
-   
 
         {/* <!-- Google / Search Engine Tags --> */}
         <meta itemprop="name" content="Centre Vitus" />
