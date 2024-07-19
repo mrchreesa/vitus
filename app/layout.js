@@ -6,13 +6,11 @@ export const metadata = {
   description: "Providing individual and family counselling",
   openGraph: {
     // images: 'https://i.postimg.cc/DzHcq6yp/vitus-en.jpg',
-    images: '/logo.jpg',
+  
 
     
   },
-  icons: {
-    icon: "/logo.jpg",
-  },
+
 };
 
 export default function RootLayout({ children }) {

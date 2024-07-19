@@ -32,10 +32,10 @@ export const metadata = {
   title: "Centre Vitus",
   description: "Providing individual and family counselling",
   openGraph: {
-    images: '/opengraph-image.jpg',
+    images: 'https://i.postimg.cc/DzHcq6yp/vitus-en.jpg',
   },
   icons: {
-    icon: "/vitus-en.jpg",
+    icon: "/logo.png",
   },
 };
 
@@ -64,10 +64,8 @@ export default function LocaleLayout({ children, params: { locale } }) {
     >
       <head>
         <link rel="preload" href="/maze.jpeg" as="image" />
-        <link rel="shortcut icon" href="/logo.png" />
         <meta charSet="UTF-8" />
-        {/* <meta name="description" content="Individual and family counselling." />
-        <meta name="keywords" content="counselling, vitus, training" /> */}
+       
       </head>
       <body>
         <NavBar
