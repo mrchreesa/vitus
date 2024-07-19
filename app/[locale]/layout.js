@@ -32,7 +32,7 @@ export const metadata = {
   title: "Centre Vitus",
   description: "Providing individual and family counselling",
   openGraph: {
-    images: 'https://i.postimg.cc/DzHcq6yp/vitus-en.jpg',
+    images: 'https://i.postimg.cc/3yjphgG2/vitus-en.jpg',
   },
   icons: {
     icon: "/logo.png",
