@@ -39,9 +39,9 @@ export const metadata = {
     card: "summary_large_image",
    
   },
-  openGraph: {
-    images: "/opengraph-image.png",
-  },
+  // openGraph: {
+  //   images: "/opengraph-image.png",
+  // },
   icons: {
     icon: "/logo.png",
   },
