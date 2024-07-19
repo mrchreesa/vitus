@@ -32,7 +32,7 @@ export const metadata = {
   title: "Centre Vitus",
   description: "Providing individual and family counselling",
   openGraph: {
-    image: 'https://i.postimg.cc/3yjphgG2/vitus-en.jpg',
+    images: "https://i.postimg.cc/3yjphgG2/vitus-en.jpg",
   },
   icons: {
     icon: "/logo.png",
@@ -65,7 +65,33 @@ export default function LocaleLayout({ children, params: { locale } }) {
       <head>
         <link rel="preload" href="/maze.jpeg" as="image" />
         <meta charSet="UTF-8" />
-       
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="https://www.centrevitus.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Centre Vitus" />
+        <meta
+          property="og:description"
+          content="Providing individual and family counselling"
+        />
+        <meta
+          property="og:image"
+          content="https://i.postimg.cc/3yjphgG2/vitus-en.jpg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="centrevitus.com" />
+        <meta property="twitter:url" content="https://www.centrevitus.com" />
+        <meta name="twitter:title" content="Centre Vitus" />
+        <meta
+          name="twitter:description"
+          content="Providing individual and family counselling"
+        />
+        <meta
+          name="twitter:image"
+          content="https://i.postimg.cc/3yjphgG2/vitus-en.jpg"
+        />
       </head>
       <body>
         <NavBar
