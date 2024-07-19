@@ -32,9 +32,9 @@ const typo = localFont({
 export const metadata = {
   title: "Centre Vitus",
   description: "Providing individual and family counselling",
-  openGraph: {
-    images: "https://i.postimg.cc/3yjphgG2/vitus-en.jpg",
-  },
+  // openGraph: {
+  //   images: "https://i.postimg.cc/3yjphgG2/vitus-en.jpg",
+  // },
   icons: {
     icon: "/logo.png",
   },
@@ -94,10 +94,10 @@ export default function LocaleLayout({ children, params: { locale } }) {
           property="og:description"
           content="Providing individual and family counselling"
         />
-        <meta
+        {/* <meta
           property="og:image"
           content="https://i.postimg.cc/3yjphgG2/vitus-en.jpg"
-        />
+        /> */}
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
