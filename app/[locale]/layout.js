@@ -40,7 +40,7 @@ export const metadata = {
    
   },
   // openGraph: {
-  //   images: "https://i.postimg.cc/DzHcq6yp/vitus-en.jpg",
+  //   images: "/opengraph-image.png",
   // },
   icons: {
     icon: "/logo.png",
