@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
           url: blog.image,
           width: 1200,
           height: 630,
-          alt: evblognt.title,
+          alt: blog.title,
         },
       ],
     },
