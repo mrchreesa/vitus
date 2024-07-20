@@ -77,6 +77,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
       <head>
         <meta charSet="UTF-8" />
         <link rel="preload" href="/maze.jpeg" as="image" />
+       
         <meta
           property="og:image"
           content="https://centrevitus.com/opengraph-image.png"

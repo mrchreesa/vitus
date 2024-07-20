@@ -10,8 +10,9 @@ const EventPost = ({ event, contact }) => {
 
   return (
     <>
-      <div className="mt-[10%] wave xl:mt-[8%]  mx-auto px-5 text-green max-w-[1300px]">
-        <div className="flex flex-col md:flex-row max-h-[70vh]">
+      <div className="wave">
+      <div className="mt-[10%]  xl:mt-[8%]  mx-auto px-5 text-green max-w-[1300px]">
+        <div className="flex  flex-col md:flex-row max-h-[70vh]">
           <div className="mb-8 sm:mx-0 md:mb-16 md:w-1/2">
             <div className="shadow-md mt-10 md:mt-0 rounded-md transition-shadow duration-200 group-hover:shadow-lg sm:mx-0">
               <Image
@@ -47,6 +48,7 @@ const EventPost = ({ event, contact }) => {
             </div>
           )}
         </div>
+      </div>
       </div>
       <ContactUs
         title={contact.title}
