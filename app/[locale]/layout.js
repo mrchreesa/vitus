@@ -77,50 +77,10 @@ export default function LocaleLayout({ children, params: { locale } }) {
       className={`${mont.variable} font-sans ${typo.variable} font-sans`}
     >
       <head>
-        {/* <title>{metadata.title}</title> */}
+
         <meta charSet="UTF-8" />
-        <meta property="og:site_name" content="Centre Vitus" />
-        <meta property="og:url" content="https://www.centrevitus.com" />
-        {/* <meta name="description" content={metadata.description} /> */}
-        {/* <link rel="icon" href={metadata.icons.icon} /> */}
-
-        {/* <!-- Google / Search Engine Tags --> */}
-        {/* <meta itemProp="name" content="Centre Vitus" />
-        <meta
-          itemProp="description"
-          content="Providing individual and family counselling"
-        />
-        <meta
-          itemProp="image"
-          content="https://i.postimg.cc/3r6rFkPq/opengraph-image.png"
-        /> */}
-
-        {/* <!-- Facebook Meta Tags --> */}
-        {/* <meta property="og:url" content="https://www.centrevitus.com/bg" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Centre Vitus" />
-        <meta
-          property="og:description"
-          content="Providing individual and family counselling"
-        />
-        <meta
-          property="og:image"
-          content="https://i.postimg.cc/3r6rFkPq/opengraph-image.png"
-        /> */}
-
-        {/* <!-- Twitter Meta Tags --> */}
-        {/* <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Centre Vitus" />
-        <meta
-          name="twitter:description"
-          content="Providing individual and family counselling"
-        />
-        <meta
-          name="twitter:image"
-          content="https://i.postimg.cc/3r6rFkPq/opengraph-image.png"
-        /> */}
-
         <link rel="preload" href="/maze.jpeg" as="image" />
+        <meta property="fb:app_id" content="123456789" />
       </head>
       <body>
         <NavBar

@@ -7,12 +7,16 @@ import { getEvent } from "@/sanity/sanity-utils";
 export const generateMetadata = async ({ params }) => {
   const slug = params.eventPost;
   const event = await getEvent(slug);
+  if (!event) {
+    return 
+  }
   return {
     title: event.name,
-    description: event.description,
+    description: event.description.substring(0, 160),
     openGraph: {
       title: event.name,
-      description: event.description,
+      description: event.description.substring(0, 160),
+      type: 'article',
       images: [
         {
           url: event.image,
