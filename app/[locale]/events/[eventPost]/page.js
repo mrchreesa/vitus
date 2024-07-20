@@ -11,6 +11,8 @@ export const generateMetadata = async ({ params }) => {
     title: event.name,
     description: event.description,
     openGraph: {
+      title: event.name,
+      description: event.description,
       images: [
         {
           url: event.image,

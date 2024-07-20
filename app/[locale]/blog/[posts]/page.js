@@ -5,11 +5,14 @@ import { getBlog } from "@/sanity/sanity-utils";
 export const generateMetadata = async ({ params }) => {
   const slug = params.eventPost;
   const blog = await getBlog(slug);
-  console.log(blog);
+
   return {
     title: blog.title,
     description: blog.description,
     openGraph: {
+      title: blog.title,
+      description: blog.description,
+      
       images: [
         {
           url: blog.image,
