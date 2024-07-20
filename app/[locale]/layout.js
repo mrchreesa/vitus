@@ -28,30 +28,29 @@ const typo = localFont({
   variable: "--font-typo",
 });
 
-export const metadata = {
-  // metadataBase: new URL('https://centrevitus.com'),
-  title: {
-    default: "Centre Vitus",
-    template: "%s - Centre Vitus",
-  },
-  description: "Providing individual and family counselling",
-  twitter: {
-    card: "summary_large_image",
-  },
-  openGraph: {
-    images: [
-      {
-        url: "https://i.postimg.cc/3r6rFkPq/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Preview of the website",
-      },
-    ],
-  },
-  icons: {
-    icon: "/logo.png",
-  },
-};
+// export const metadata = {
+//   // metadataBase: new URL('https://centrevitus.com'),
+//   title: {
+//     default: "Counselling Centre Vitus",
+//     template: "%s - Centre Vitus",
+//   },
+//   description: "Providing individual and family counselling, oganisational training and supervision for professionals from the helping professions",
+//   twitter: {
+//     card: "summary_large_image",
+//   },
+//   openGraph: {
+//     images: [
+//       {
+//         url: "https://i.postimg.cc/3r6rFkPq/opengraph-image.png",
+       
+//         alt: "Preview of the website",
+//       },
+//     ],
+//   },
+//   icons: {
+//     icon: "/logo.png",
+//   },
+// };
 
 export default function LocaleLayout({ children, params: { locale } }) {
   // console.log(locale);
@@ -86,7 +85,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
         {/* <link rel="icon" href={metadata.icons.icon} /> */}
 
         {/* <!-- Google / Search Engine Tags --> */}
-        <meta itemProp="name" content="Centre Vitus" />
+        {/* <meta itemProp="name" content="Centre Vitus" />
         <meta
           itemProp="description"
           content="Providing individual and family counselling"
@@ -94,10 +93,10 @@ export default function LocaleLayout({ children, params: { locale } }) {
         <meta
           itemProp="image"
           content="https://i.postimg.cc/3r6rFkPq/opengraph-image.png"
-        />
+        /> */}
 
         {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="https://www.centrevitus.com/bg" />
+        {/* <meta property="og:url" content="https://www.centrevitus.com/bg" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Centre Vitus" />
         <meta
@@ -107,10 +106,10 @@ export default function LocaleLayout({ children, params: { locale } }) {
         <meta
           property="og:image"
           content="https://i.postimg.cc/3r6rFkPq/opengraph-image.png"
-        />
+        /> */}
 
         {/* <!-- Twitter Meta Tags --> */}
-        <meta name="twitter:card" content="summary_large_image" />
+        {/* <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Centre Vitus" />
         <meta
           name="twitter:description"
@@ -119,7 +118,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
         <meta
           name="twitter:image"
           content="https://i.postimg.cc/3r6rFkPq/opengraph-image.png"
-        />
+        /> */}
 
         <link rel="preload" href="/maze.jpeg" as="image" />
       </head>

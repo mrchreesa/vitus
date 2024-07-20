@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import ContactsComponent from "@/components/Contacts/ContactsComponent";
 
-const metadata = {
+export const metadata = {
   title: "Contacts",
   description: "Contact Centre Vitus",
 
