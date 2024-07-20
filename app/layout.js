@@ -17,13 +17,13 @@ export const metadata = {
     type: "website",
     siteName: "Counselling Centre Vitus", 
 
-    images: [
-      {
-        url: "https://ibb.co/SsvMVWZ",
+    // images: [
+    //   {
+    //     url: "https://ibb.co/SsvMVWZ",
        
-        alt: "Preview of the website",
-      },
-    ],
+    //     alt: "Preview of the website",
+    //   },
+    // ],
   },
   icons: {
     icon: "/favicon.ico",
