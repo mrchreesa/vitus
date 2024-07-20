@@ -3,13 +3,11 @@ import NavBar from "../../components/Navigation/NavBar";
 import { useTranslations } from "next-intl";
 import localFont from "next/font/local";
 
-
 const mont = localFont({
   src: [
     {
       path: "../../public/fonts/Montserrat-VariableFont_wght.ttf",
     },
- 
   ],
   variable: "--font-mont",
 });
@@ -42,7 +40,7 @@ const typo = localFont({
 //     images: [
 //       {
 //         url: "https://i.postimg.cc/3r6rFkPq/opengraph-image.png",
-       
+
 //         alt: "Preview of the website",
 //       },
 //     ],
@@ -77,10 +75,15 @@ export default function LocaleLayout({ children, params: { locale } }) {
       className={`${mont.variable} font-sans ${typo.variable} font-sans`}
     >
       <head>
-
         <meta charSet="UTF-8" />
         <link rel="preload" href="/maze.jpeg" as="image" />
-        <meta property="fb:app_id" content="123456789" />
+        <meta
+          property="og:image"
+          content="https://centrevitus.com/opengraph-image.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="400" />
       </head>
       <body>
         <NavBar
