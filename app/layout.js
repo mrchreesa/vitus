@@ -2,7 +2,7 @@ import "./globals.css";
 
 
 export const metadata = {
-  // metadataBase: new URL('https://centrevitus.com'),
+  metadataBase: new URL('https://centrevitus.com'),
   title: {
     default: "Counselling Centre Vitus",
     template: "%s - Centre Vitus",
