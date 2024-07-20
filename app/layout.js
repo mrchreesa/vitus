@@ -7,13 +7,13 @@ export const metadata = {
     default: "Counselling Centre Vitus",
     template: "%s - Centre Vitus",
   },
-  description: "Providing individual and family counselling, oganisational training and supervision for professionals from the helping professions",
+  description: "Providing individual and family counselling, organisational training and supervision for professionals from the helping professions",
   twitter: {
     card: "summary_large_image",
   },
   openGraph: {
     title: "Counselling Centre Vitus",
-    description: "Providing individual and family counselling, oganisational training and supervision for professionals from the helping professions",
+    description: "Providing individual and family counselling, organisational training and supervision for professionals from the helping professions",
     type: "website",
     siteName: "Counselling Centre Vitus", 
 
