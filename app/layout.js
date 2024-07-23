@@ -20,7 +20,7 @@ export const metadata = {
     // images: [
     //   {
     //     url: "https://ibb.co/SsvMVWZ",
-       
+        
     //     alt: "Preview of the website",
     //   },
     // ],
