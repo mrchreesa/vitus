@@ -51,7 +51,8 @@ const typo = localFont({
 // };
 
 export default function LocaleLayout({ children, params: { locale } }) {
-  // console.log(locale);
+  const shouldPreloadImage = locale === 'bg' || locale === 'en' || locale === '';
+
   const t = useTranslations("Nav");
   const navigation = [
     { name: t("aboutMe"), href: "/about", current: false },
@@ -76,8 +77,10 @@ export default function LocaleLayout({ children, params: { locale } }) {
     >
       <head>
         <meta charSet="UTF-8" />
-        <link rel="preload" href="/maze.jpeg" as="image" />
-       
+        {shouldPreloadImage && (
+          <link rel="preload" href="/maze.jpeg" as="image" />
+        )}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta
           property="og:image"
           content="https://centrevitus.com/opengraph-image.png"
