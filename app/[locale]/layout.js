@@ -26,29 +26,32 @@ const typo = localFont({
   variable: "--font-typo",
 });
 
-// export const metadata = {
-//   // metadataBase: new URL('https://centrevitus.com'),
-//   title: {
-//     default: "Counselling Centre Vitus",
-//     template: "%s - Centre Vitus",
-//   },
-//   description: "Providing individual and family counselling, oganisational training and supervision for professionals from the helping professions",
-//   twitter: {
-//     card: "summary_large_image",
-//   },
-//   openGraph: {
-//     images: [
-//       {
-//         url: "https://i.postimg.cc/3r6rFkPq/opengraph-image.png",
-
-//         alt: "Preview of the website",
-//       },
-//     ],
-//   },
-//   icons: {
-//     icon: "/logo.png",
-//   },
-// };
+export async function generateMetadata({ params: { locale = 'en' } }) {
+  return {
+    metadataBase: new URL('https://centrevitus.com'),
+    title: {
+      default: locale === 'bg' ? "Консултативен център Витус" : "Counselling Centre Vitus",
+      template: locale === 'bg' ? "%s - Център Витус" : "%s - Centre Vitus",
+    },
+    description: locale === 'bg' 
+      ? "Предоставяме индивидуално и семейно консултиране, организационно обучение и супервизия за професионалисти от помагащите професии"
+      : "Providing individual and family counselling, organisational training and supervision for professionals from the helping professions",
+    twitter: {
+      card: "summary_large_image",
+    },
+    openGraph: {
+      title: locale === 'bg' ? "Консултативен център Витус" : "Counselling Centre Vitus",
+      description: locale === 'bg'
+        ? "Предоставяме индивидуално и семейно консултиране, организационно обучение и супервизия за професионалисти от помагащите професии"
+        : "Providing individual and family counselling, organisational training and supervision for professionals from the helping professions",
+      type: "website",
+      siteName: locale === 'bg' ? "Консултативен център Витус" : "Counselling Centre Vitus",
+    },
+    icons: {
+      icon: "/favicon.ico",
+    },
+  };
+}
 
 export default function LocaleLayout({ children, params: { locale } }) {
   const shouldPreloadImage = locale === 'bg' || locale === 'en' || locale === '';
