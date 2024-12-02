@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Private or authentication routes
+Disallow: /login
+Disallow: /signup
+Disallow: /register
+Disallow: /auth/
+Disallow: /account/
+Disallow: /profile/
+Disallow: /dashboard/
+
+# API routes
+Disallow: /api/
+
+# Admin routes
+Disallow: /admin/
+
+# Development/testing paths
+Disallow: /dev/
+Disallow: /test/
+Disallow: /staging/
+
+# Temporary or utility pages
+Disallow: /temp/
+Disallow: /draft/
+Disallow: /_next/
+
+Sitemap: https://your-domain.com/sitemap.xml
