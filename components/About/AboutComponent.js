@@ -36,11 +36,11 @@ const AboutComponent = ({ about, title, team, teamTitle }) => {
   };
 
   return (
-    <div id="about" className="overflow-hidden bg-white">
+    <div id="about" className="overflow-hidden bg-white pt-16 lg:pt-0">
       {/* Hero Section */}
       <div className="relative">
-        <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-8">
-          <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
+        <div className="mx-auto max-w-7xl flex flex-col-reverse lg:grid lg:grid-cols-12 lg:gap-8">
+          <div className="px-4 py-12 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center lg:py-0">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -50,11 +50,11 @@ const AboutComponent = ({ about, title, team, teamTitle }) => {
             >
               <motion.h2
                 variants={fadeInUp}
-                className="mt-10 text-3xl font-extrabold tracking-tight text-green sm:text-4xl md:mt-0"
+                className="mt-10 text-3xl font-extrabold tracking-tight text-green sm:text-4xl md:mt-0 text-center lg:text-left"
               >
                 {title}
               </motion.h2>
-              <div className="mt-6">
+              <div className="mt-6 text-center lg:text-left">
                 {paragraphs.map((paragraph, index) => (
                   <motion.p
                     variants={fadeInUp}
@@ -78,10 +78,10 @@ const AboutComponent = ({ about, title, team, teamTitle }) => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-full"
+              className="relative w-full h-auto lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-full"
             >
               <img
-                className="absolute inset-0 w-full h-full object-cover shadow-lg lg:rounded-bl-[50px]"
+                className="w-full h-auto object-cover shadow-lg rounded-b-[3rem] lg:absolute lg:inset-0 lg:h-full lg:rounded-none lg:rounded-bl-[50px]"
                 src={niki.src}
                 alt="Nikolina Angelova"
               />
@@ -95,7 +95,7 @@ const AboutComponent = ({ about, title, team, teamTitle }) => {
       {/* Team Section */}
       {team && team.length > 0 && (
         <div className="py-16 bg-gray-50 overflow-hidden lg:py-24">
-          <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+          <div className="relative max-w-xl mx-auto px-4 sm:px-6 text-center lg:text-left lg:px-8 lg:max-w-7xl">
             <motion.div
               initial="hidden"
               whileInView="visible"
