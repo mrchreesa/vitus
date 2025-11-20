@@ -12,7 +12,7 @@ const SupervisionContainer = ({ supervision }) => {
   const message = t("message");
   const submit = t("submit");
   return (
-    <>
+    <div className="flex flex-col h-full mt-20">
       <SupervisionInfoSection supervision={supervision} />
       <ContactUs
         title={title}
@@ -22,7 +22,7 @@ const SupervisionContainer = ({ supervision }) => {
         message={message}
         submit={submit}
       />
-    </>
+    </div>
   );
 };
 

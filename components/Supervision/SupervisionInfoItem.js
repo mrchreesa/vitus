@@ -19,7 +19,7 @@ const SupervisionInfoItem = ({ title, text, image, imageAlt, reverse }) => {
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeInUp}
-      className={`wave flex flex-col h-full ${
+      className={`wave flex flex-col h-full items-center justify-center ${
         reverse ? "md:flex-row-reverse md:mr-10" : "md:flex-row md:pl-10"
       } w-full mt-20 md:mt-8 `}
     >
