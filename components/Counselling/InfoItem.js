@@ -1,19 +1,22 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const InfoItem = ({ title, text, image, imageAlt, reverse }) => {
-  // const words = text.split(" "); // Split the string into an array of words by spaces
-  // const firstTwoWords = words.slice(0, 2).join(" "); // Join the first two words into a string
-  // const remainingWords = words.slice(2).join(" ");
-  // function highlightMarkedWords(description) {
-  //   // Regular expression to find words between the special symbols (*)
-  //   const regex = /\*([^*]+)\*/g;
-  //   return description.replace(regex, '<span class="font-semibold">$1</span>');
-  // }
-
-  // const highlightedDescription = highlightMarkedWords(text);
   const paragraphs = text.split("\n\n");
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeInUp}
       className={` flex flex-col ${
         reverse ? "md:flex-row-reverse md:mr-10" : "md:flex-row md:pl-10"
       } w-full mt-8 md:mt-16`}
@@ -45,7 +48,7 @@ const InfoItem = ({ title, text, image, imageAlt, reverse }) => {
           className="w-[70%] h-auto object-cover"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

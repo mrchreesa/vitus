@@ -53,11 +53,13 @@ const DropdownServices = ({ services, locale, name }) => {
   };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div
+      style={{ position: "relative" }}
+      onMouseEnter={toggleOpen}
+      onMouseLeave={toggleClose}
+    >
       <button
         id="dropdownHoverButton"
-        onMouseEnter={toggleOpen} // Show dropdown on mouse enter
-        // onMouseLeave={toggleClose} // Hide dropdown on mouse leave
         className="text-gray-300 bg-greenDark hover:text-white hover:bg-green transition-all duration-200  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
         type="button"
         onClick={() => setIsOpen(!isOpen)}
@@ -83,7 +85,6 @@ const DropdownServices = ({ services, locale, name }) => {
       {isOpen && (
         <div
           id="dropdownHover"
-          onMouseLeave={toggleClose} // Hide dropdown on mouse leave
           className="z-10 absolute  divide-y divide-gray-100 rounded-lg shadow w-44 bg-green"
           style={{ top: "100%", left: 0 }}
         >

@@ -1,6 +1,6 @@
 import React from "react";
 import AboutComponent from "../../../components/About/AboutComponent";
-import { useTranslations } from "next-intl";
+import { useTranslations, useMessages } from "next-intl";
 
 export const metadata = {
   title: "About",
@@ -11,10 +11,13 @@ export const metadata = {
 
 const About = () => {
   const t = useTranslations("About");
+  const messages = useMessages();
   const about = t("description");
   const title = t("title");
+  const teamTitle = t("teamTitle");
+  const team = messages.About?.team || [];
 
-  return <AboutComponent about={about} title={title} />;
+  return <AboutComponent about={about} title={title} team={team} teamTitle={teamTitle} />;
 };
 
 export default About;

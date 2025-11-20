@@ -1,41 +1,64 @@
-import React from "react";
-import niki from "../../public/Niki.jpg";
+"use client";
 
-const AboutComponent = ({ about, title }) => {
+import React from "react";
+import { motion } from "framer-motion";
+import niki from "../../public/Niki.jpg";
+import Te from "../../public/Te.jpg";
+import Bo from "../../public/Bo.jpg";
+import De from "../../public/De.jpg";
+import Al from "../../public/Al.jpg";
+import Ma from "../../public/Ma.jpg";
+
+const AboutComponent = ({ about, title, team, teamTitle }) => {
   const paragraphs = about.split("\n\n");
 
+  const images = {
+    Te,
+    Bo,
+    De,
+    Al,
+    Ma,
+  };
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
-    <div id="about" className="relative overflow-hidden">
-      <div className="mt-10 2xl:mt-16 mx-auto flex items-center text-green font-mont 2xl:ml-[10%] 2xl:h-screen">
-        <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 2xl:pb-10">
-          <svg
-            className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
-            fill="currentColor"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <polygon points="50,0 100,0 50,100 0,100"></polygon>
-          </svg>
-
-          <div className="pt-1"></div>
-
-          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-28 2xl:mt-10 lg:px-8">
-            <div className="sm:text-center lg:text-left">
-              <h2 className="my-6 text-2xl tracking-tight font-extrabold text-green sm:text-3xl md:text-3xl">
+    <div id="about" className="overflow-hidden bg-white">
+      {/* Hero Section */}
+      <div className="relative">
+        <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-8">
+          <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+              className="lg:py-24 xl:py-32"
+            >
+              <motion.h2
+                variants={fadeInUp}
+                className="mt-10 text-3xl font-extrabold tracking-tight text-green sm:text-4xl md:mt-0"
+              >
                 {title}
-              </h2>
-
-              <div>
+              </motion.h2>
+              <div className="mt-6">
                 {paragraphs.map((paragraph, index) => (
-                  // Split each paragraph by single newline for line breaks within the paragraph
-                  <p
-                    className={`mb-4 ${
-                      index === paragraphs.length - 1 ||
-                      index === paragraphs.length - 2
-                        ? "lg:w-[90%]"
-                        : ""
-                    }`}
+                  <motion.p
+                    variants={fadeInUp}
+                    className="mt-4 text-lg text-gray-600 leading-relaxed"
                     key={index}
                   >
                     {paragraph.split("\n").map((line, lineIndex) => (
@@ -44,20 +67,92 @@ const AboutComponent = ({ about, title }) => {
                         {lineIndex < paragraph.split("\n").length - 1 && <br />}
                       </React.Fragment>
                     ))}
-                  </p>
+                  </motion.p>
                 ))}
               </div>
-            </div>
-          </main>
+            </motion.div>
+          </div>
+          <div className="relative lg:col-span-6 lg:h-full">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-full"
+            >
+              <img
+                className="absolute inset-0 w-full h-full object-cover shadow-lg lg:rounded-bl-[50px]"
+                src={niki.src}
+                alt="Nikolina Angelova"
+              />
+              {/* Decorative element */}
+              <div className="hidden lg:block absolute inset-y-0 left-0 -ml-4 w-4 bg-green opacity-20 rounded-l-lg"></div>
+            </motion.div>
+          </div>
         </div>
       </div>
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 flex items-center">
-        <img
-          className="h-full w-full object-cover md:object-left lg:object-contain sm:h-72 md:h-full"
-          src={niki.src}
-          alt="image of Nikolina"
-        />
-      </div>
+
+      {/* Team Section */}
+      {team && team.length > 0 && (
+        <div className="py-16 bg-gray-50 overflow-hidden lg:py-24">
+          <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+              className="relative mb-16 text-center"
+            >
+              <h2 className="text-3xl leading-8 font-extrabold tracking-tight text-green sm:text-4xl">
+                {teamTitle}
+              </h2>
+              <div className="mt-4 max-w-3xl mx-auto">
+                <div className="h-1 w-20 bg-green mx-auto rounded-full"></div>
+              </div>
+            </motion.div>
+
+            <div className="space-y-24">
+              {team.map((member, index) => (
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                  variants={fadeInUp}
+                  key={index}
+                  className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center"
+                >
+                  <div
+                    className={`relative ${
+                      index % 2 === 1 ? "lg:order-2" : ""
+                    }`}
+                  >
+                    <div className="relative mx-auto w-full rounded-2xl shadow-xl lg:max-w-md overflow-hidden aspect-[3/4] transform transition duration-500 hover:scale-[1.02]">
+                      <img
+                        className="w-full h-full object-cover"
+                        src={images[member.image].src}
+                        alt={member.name}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                  <div
+                    className={`mt-10 lg:mt-0 ${
+                      index % 2 === 1 ? "lg:order-1" : ""
+                    }`}
+                  >
+                    <h3 className="text-3xl font-bold text-green tracking-tight">
+                      {member.name}
+                    </h3>
+                    <p className="mt-6 text-lg text-gray-600 leading-relaxed whitespace-pre-line">
+                      {member.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

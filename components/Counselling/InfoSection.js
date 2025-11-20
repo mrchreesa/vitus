@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import InfoItem from "./InfoItem";
+import { motion } from "framer-motion";
 
 const InfoSection = ({
   counselling,
@@ -40,14 +43,25 @@ const InfoSection = ({
   const firstTwoWords = words.slice(0, 2).join(" "); // Join the first two words into a string
   const remainingWords = words.slice(2).join(" ");
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
     <>
-      <div className=" border-greenDark  px-6 blob ">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        className=" border-greenDark  px-6 blob "
+      >
         <p className="text-green font-mont font-medium  py-12 px-4 text-xl">
           <span className="font-bold mr-1">{firstTwoWords}</span>
           {remainingWords}
         </p>
-      </div>
+      </motion.div>
       <div id="counselling">
         <InfoItem {...section1} />
         <div className="blob"></div>
@@ -57,7 +71,13 @@ const InfoSection = ({
         <InfoItem {...section3} />
       </div>
 
-      <div className="blob flex flex-col md:flex-row md:pl-10 w-full">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        className="blob flex flex-col md:flex-row md:pl-10 w-full"
+      >
         <div className="w-full md:flex-1  flex items-center font-mont text-green">
           <div className="p-8 md:p-12 lg:p-16">
             <h2 className="text-2xl md:text-3xl text-center lg:text-4xl font-bold mb-4 md:mb-6">
@@ -66,7 +86,7 @@ const InfoSection = ({
             <p className="text-base md:text-lg mb-4 ">{vision.description}</p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div id="map" className="wave w-full h-96 relative">
         <iframe

@@ -29,14 +29,16 @@ const ContactsComponent = ({ address, contacts, contact }) => {
           ></iframe>
         </div>
       </div>
-      <ContactUs
-        title={contact.title}
-        description={contact.description}
-        name={contact.name}
-        email={contact.email}
-        message={contact.message}
-        submit={contact.submit}
-      />
+      <div id="enquiry">
+        <ContactUs
+          title={contact.title}
+          description={contact.description}
+          name={contact.name}
+          email={contact.email}
+          message={contact.message}
+          submit={contact.submit}
+        />
+      </div>
     </>
   );
 };

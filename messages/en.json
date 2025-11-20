@@ -14,7 +14,35 @@
   },
   "About": {
     "title": "About us",
-    "description": "Nikolina Angelova, the Director of counselling Vitus Centre, is a qualified integrative counsellor with more than 8 years clinical experience. Nikolina uses an integrative approach which combines different psychological techniques to provide the best unique care for each individual approach. \n\n Nikolina completed her MSc in Child and Adolescent Clinical Psychology at the University of Edinburgh, after which she specialised in Integrative Counselling. She is a counsellor member of the Scotland's professional body for counselling and psychotherapy (COSCA) and a qualified counselling supervisor by the Irish Association for Counselling and Psychotherapy (IACP). Nikolina is also an accredited counselling trainer and provides trainings for professionals in the caring professions.\n\n Her work specialises in trauma and bereavement, children and adolescence, attachment, relationship issues, emotionally focused therapy and creativity. Nikolina has a specific interest in working with traumatic experiences and working with the past, which began back in 2011. While she was studying Cultural and Social Anthropology at the University in Vienna, she also did a one-year course 'Introduction to Psychoanalysis'.  Research shows that creative approaches in counselling are extremely effective for self-exploration and in dealing with traumatic experiences and overcoming relationship crises."
+    "description": "Nikolina Angelova, the Director of counselling Vitus Centre, is a qualified integrative counsellor with more than 8 years clinical experience. Nikolina uses an integrative approach which combines different psychological techniques to provide the best unique care for each individual approach. \n\n Nikolina completed her MSc in Child and Adolescent Clinical Psychology at the University of Edinburgh, after which she specialised in Integrative Counselling. She is a counsellor member of the Scotland's professional body for counselling and psychotherapy (COSCA) and a qualified counselling supervisor by the Irish Association for Counselling and Psychotherapy (IACP). Nikolina is also an accredited counselling trainer and provides trainings for professionals in the caring professions.\n\n Her work specialises in trauma and bereavement, children and adolescence, attachment, relationship issues, emotionally focused therapy and creativity. Nikolina has a specific interest in working with traumatic experiences and working with the past, which began back in 2011. While she was studying Cultural and Social Anthropology at the University in Vienna, she also did a one-year course 'Introduction to Psychoanalysis'.  Research shows that creative approaches in counselling are extremely effective for self-exploration and in dealing with traumatic experiences and overcoming relationship crises.",
+    "teamTitle": "Our psychologists-consultants under supervision",
+    "team": [
+      {
+        "name": "Teodora Trandeva - Avramova",
+        "description": "Teodora Trandeva - Avramova is a Master in English Language in Primary Education and a Bachelor in Preschool and Primary School Pedagogy. She is currently studying for a second Master's degree in \"Mental Health for Children and Teenagers\" at the University of Edinburgh and a postgraduate qualification in \"Integrative Approach in Psychological Counselling\" at Vitus Centre. She has three years of experience in counselling children under the \"Close Person\" program, part of the Innovative Program for Mental Health and Support at Roerich Private School, Sofia. She has undergone training in \"Emotionally Focused Therapy and Family Counselling\" at Vitus Centre and \"Psychomotor Skills for Children\" at the German Institute for Psychomotor Skills for Children (certified psychomotor specialist, accredited by BAPM). \nShe has an interest in working with children, supporting pregnant women or those who have already given birth, as well as those who have suffered a loss. Currently, Teodora is on maternity leave until April 2026.",
+        "image": "Te"
+      },
+      {
+        "name": "Boryana Staneva",
+        "description": "Boryana Staneva is a Bachelor and Master in Industrial Engineering. After 20+ years of experience in the IT sphere, due to a long-standing interest in psychology, relationships and working with people, she decided to retrain. In 2022, she completed a two-year course in \"Logotherapy and Existential Analysis\" at the Bulgarian Society for Logotherapy and Existential Analysis for a consultant-logotherapist. She is currently in her second year of training in \"Integrative Approach in Psychological Counselling\" at Vitus Centre. \nShe has an interest in working with adolescents and adults going through depression, existential crisis, relationship problems, identity problems, burnout.",
+        "image": "Bo"
+      },
+      {
+        "name": "Delyana Nikolova",
+        "description": "Delyana Nikolova is currently in her second year of training in \"Integrative Approach in Psychological Counselling\" at Vitus Centre. She chose the path to psychology out of love for the human being – for their vulnerability, but also for their strength to change and grow. For her, the meeting between consultant and client is a space of trust and acceptance, in which together they can find direction, meaning and hope. Delyana believes that change happens step by step – with patience, trust and willingness to be heard and understood. She has undergone training in \"Emotionally Focused Therapy and Family Counselling\" and \"Introduction to Integrative Approach to Counselling\" at Vitus Centre. \nShe has an interest in working with adults, families and children on topics such as anxiety, low self-esteem, relationship difficulties, coping after separation, feeling of isolation, etc.",
+        "image": "De"
+      },
+      {
+        "name": "Aleksandra Yordanova",
+        "description": "Aleksandra Yordanova is a Master in General Psychology at Sofia University and a Master in Sports Psychology at the University of Edinburgh. She is currently in her second year of training in \"Integrative Approach in Psychological Counselling\" at Vitus Centre. She has counselling experience working with teenagers at risk, victims of human trafficking (at A21 Bulgaria), children with disabilities, athletes. \nShe has an interest in working with teenagers and young people, working with traumatic experiences, as well as using sport as a means to improve mental health.",
+        "image": "Al"
+      },
+      {
+        "name": "Martina Radoslavova",
+        "description": "Martina Radoslavova is a Bachelor in Social Activities at Sofia University. She is currently in her second year of training in \"Integrative Approach in Psychological Counselling\" at Vitus Centre. Martina believes that integrative psychotherapy skillfully combines different techniques so that the person is supported in the right way for them. As a therapist, her goal is to support the personality on its path to growth and self-actualization.\nShe has an interest in working with anxiety, trauma, relationship problems and self-esteem, as well as stress in the workplace.",
+        "image": "Ma"
+      }
+    ]
   },
    "VitusInfo":{
     "title": "Vitus Centre",

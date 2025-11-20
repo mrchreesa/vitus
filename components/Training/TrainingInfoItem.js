@@ -1,11 +1,24 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
   const paragraphs = text.split("\n\n");
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
     // Add `justify-center items-center` to center content. Use `mx-auto` to center the whole block horizontally.
     // `md:h-screen` ensures the container takes the full screen height at medium screens and above.
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeInUp}
       className={`flex flex-col md:flex-row font-mont ${
         reverse ? "md:flex-row-reverse" : ""
       } 
@@ -39,7 +52,7 @@ const TrainingInfoItem = ({ title, text, image, imageAlt, reverse }) => {
           className="w-[90%] h-auto md:h-1/2 max-h-[65vh] object-cover" // Adjust `md:h-1/2` as needed to control the image size on larger screens.
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

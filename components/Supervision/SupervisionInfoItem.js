@@ -1,11 +1,24 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const SupervisionInfoItem = ({ title, text, image, imageAlt, reverse }) => {
   const words = text.split(" "); // Split the string into an array of words by spaces
   const firstTwoWords = words.slice(0, 2).join(" "); // Join the first two words into a string
   const remainingWords = words.slice(2).join(" ");
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeInUp}
       className={`wave flex flex-col h-full ${
         reverse ? "md:flex-row-reverse md:mr-10" : "md:flex-row md:pl-10"
       } w-full mt-20 md:mt-8 `}
@@ -36,7 +49,7 @@ const SupervisionInfoItem = ({ title, text, image, imageAlt, reverse }) => {
           className="w-full h-auto object-cover"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

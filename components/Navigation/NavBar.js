@@ -106,7 +106,7 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                       </div>
                       {/* <!-- Instagram --> */}
                       <a
-                        href="https://www.instagram.com/vitus.centre.ltd?igsh=MWU0ZHZibGE5dTFtdA%3D%3D&utm_source=qr"
+                        href="https://www.instagram.com/centre.vitus?utm_source=qr"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
