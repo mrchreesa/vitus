@@ -77,7 +77,7 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                       </div>
                       {/* <!-- Instagram --> */}
                       <a
-                        href="https://www.instagram.com/centre.vitus?utm_source=qr"
+                        href="https://www.instagram.com/centre.vitus"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -140,7 +140,7 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                       </div>
                       {/* <!-- Instagram --> */}
                       <a
-                        href="https://www.instagram.com/centre.vitus?utm_source=qr"
+                        href="https://www.instagram.com/centre.vitus"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
