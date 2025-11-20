@@ -57,7 +57,7 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                   </Link>
                 </div>
                 <div className="flex flex-grow"></div>
-                <div className="flex lg:hidden items-center justify-center mr-10">
+                <div className="flex lg:hidden items-center justify-end mr-24">
                       {/* Facebook icon */}
                       <div className="ml-4 mr-6">
                         <a
@@ -80,6 +80,11 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                         href="https://www.instagram.com/centre.vitus"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          window.open('https://www.instagram.com/centre.vitus', '_blank', 'noopener,noreferrer');
+                        }}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -143,6 +148,11 @@ export default function NavBar({ locale, navigation, enquiry, services }) {
                         href="https://www.instagram.com/centre.vitus"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          window.open('https://www.instagram.com/centre.vitus', '_blank', 'noopener,noreferrer');
+                        }}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
