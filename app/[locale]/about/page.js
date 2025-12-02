@@ -16,8 +16,9 @@ const About = () => {
   const title = t("title");
   const teamTitle = t("teamTitle");
   const team = messages.About?.team || [];
+  const nadia = messages.About?.nadia || null;
 
-  return <AboutComponent about={about} title={title} team={team} teamTitle={teamTitle} />;
+  return <AboutComponent about={about} title={title} nadia={nadia} team={team} teamTitle={teamTitle} />;
 };
 
 export default About;
